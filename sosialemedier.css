@@ -5,8 +5,8 @@
 
 #navbar {
     width: 100%;
-    height: 40px;
-    background-color: red;
+    height: 80px;
+    background-color: var(--color1);
 }
 
 :root {
