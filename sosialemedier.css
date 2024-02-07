@@ -29,5 +29,5 @@
 }
 
 .1 {
-    background-color: --color5;
+    background-color: var(--color5);
 }
