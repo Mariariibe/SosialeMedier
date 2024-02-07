@@ -32,10 +32,12 @@
 
 p {
     font-family: 'Josefin Sans';
+    font-weight: 400;
 }
 
 h1 {
-    font-family: 'Kanit'
+    font-family: 'Kanit';
+    font-weight: 400;
 }
 
 .1 {
