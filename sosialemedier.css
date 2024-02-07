@@ -1,10 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: var(--color6);
 }
 
-#navbar {
+.navbar {
     width: 100%;
-    height: 40px;
-    background-color: red;
+    height: 80px;
+    background-color: var(--color1);
+}
+
+.navbar h1 {
+    color: var(--color5);
+    background-color: var(--color1);
+}
+
+:root {
+    --color1: #0d1b2a;
+    --color2: #1b263b;
+    --color3: #415a77;
+    --color4: #778da9;
+    --color5: #e0e1dd;
+    --color6: #ccdbdc;
 }
