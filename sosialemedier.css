@@ -32,12 +32,27 @@
 
 p {
     font-family: 'Josefin Sans';
+    font-weight: 400;
 }
 
 h1 {
-    font-family: 'Kanit'
+    font-family: 'Kanit';
+    font-weight: 400;
 }
 
 .1 {
     background-color: var(--color5);
 }
+
+<<<<<<< Updated upstream
+.2 {
+    background-color: var(--color6);
+}
+=======
+/* Hero */
+.hero{
+    position: relative;
+
+}
+
+>>>>>>> Stashed changes
