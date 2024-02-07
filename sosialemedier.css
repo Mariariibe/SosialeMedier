@@ -26,6 +26,16 @@
 .navbar h1 {
     color: var(--color5);
     background-color: var(--color1);
+    font-family: 'Cute Font';
+    font-size: 50px;
+}
+
+p {
+    font-family: 'Josefin Sans';
+}
+
+h1 {
+    font-family: 'Kanit'
 }
 
 .1 {
