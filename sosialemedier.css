@@ -44,6 +44,15 @@ h1 {
     background-color: var(--color5);
 }
 
+<<<<<<< Updated upstream
 .2 {
     background-color: var(--color6);
 }
+=======
+/* Hero */
+.hero{
+    position: relative;
+
+}
+
+>>>>>>> Stashed changes
