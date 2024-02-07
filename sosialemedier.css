@@ -48,6 +48,11 @@ h1 {
     background-color: var(--color6);
 }
 
+.containter {
+    width: 80%;
+    display: flex;
+}
+
 /* Hero */
 .hero{
     position: relative;
