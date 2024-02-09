@@ -1,61 +1,68 @@
 /* Fonter: Cute Font (logo), Josefin Sans (brødtekst), Kanit (overskrifter) */
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body {
+  margin: 0px;
+}
 
+/* Container for all sections */
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
+
+.container p {
+    max-width: 400px;
+    margin: 0 auto;
+}
   
-  
-  .section1 {
-    grid-column: 1;
+/* First section with text to the left and image to the right */
+.section1 {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 20px;
-    border: 1px solid #ccc;
+    background-color: var(--color5);
   }
   
-  
-  .section2 {
-    grid-column: 2;
+/* Second section with text to the right and image to the left */
+.section2 {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: right;
-    padding: 20px;
-    border: 1px solid #ccc;
+    text-align: left;
+    background-color: var(--color6);
   }
   
- 
-  .section3 {
-    grid-column: 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+/* Third section with text to the left and right, and image in the center */
+.section3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: var(--color5);
   }
   
-  
-  img {
+/* Style for the images */
+img {
     max-width: 100%;
     height: auto;
+    margin: 20px;
   }
   
-  
-  .read-more {
+/* Style for the "read more" link */
+.read-more {
     margin-top: 10px;
     text-decoration: none;
     color: #3498db;
     font-weight: bold;
   }
   
- 
-  .read-more:hover {
+/* Hover effect for the "read more" link */
+.read-more:hover {
     text-decoration: underline;
   }
 
@@ -80,6 +87,10 @@
     width: 100%;
     height: 80px;
     background-color: var(--color1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .navbar h1 {
@@ -93,7 +104,6 @@ p {
     font-family: 'Josefin Sans';
     font-weight: 200;
     font-size: 25px;
-    background-color: inherit;
 }
 
 h1 {
@@ -116,7 +126,9 @@ h1 {
 }
 
 section {
-    padding: 40px;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
 }
 
 .2 {
@@ -140,6 +152,7 @@ section {
     object-fit: cover;
 }
 
+
 .gjennomsiktig {
     display: flex;
     justify-content: center;
@@ -147,3 +160,27 @@ section {
     background-color: var(--bakgrunnsfarge1);
     z-index: 2;
 }
+
+.menyknapp {
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--color1);
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color5);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
