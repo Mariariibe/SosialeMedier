@@ -53,7 +53,7 @@
         }
 
         button {
-            background-color: #007bff;
+            background-color: blue;
             color: #fff;
             border: none;
             padding: 8px 15px;
@@ -62,7 +62,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: darkblue;
         }
 
         factor {
@@ -76,10 +76,10 @@
     <script>
         // JavaScript for "Les mer"
         document.addEventListener("DOMContentLoaded", function () {
-            // Finn alle seksjonene med klasse "variation2"
+
             var variationSections = document.querySelectorAll('.variation2');
 
-            // Gå gjennom hver seksjon og legg til "Les mer" -knapp og hendelsehåndtering
+
             variationSections.forEach(function (section) {
                 var paragraphs = section.querySelectorAll('p.hidden');
 
@@ -87,11 +87,11 @@
                     var button = document.createElement('button');
                     button.innerText = 'Les mer';
                     button.addEventListener('click', function () {
-                        // Bytt visningsstatus for teksten inni seksjonen
+                        // Endre visningsstatus
                         paragraph.classList.toggle('hidden');
                     });
 
-                    // Legg til knappen etter hvert avsnitt
+                    // Ny knapp etter hvert avsnitt
                     paragraph.insertAdjacentElement('afterend', button);
                 });
             });
