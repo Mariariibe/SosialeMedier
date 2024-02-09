@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Innlevering Film"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SosialeMedier"
+	}
+}
