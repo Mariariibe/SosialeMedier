@@ -7,21 +7,100 @@
     <title>konspirasjonsteorier</title>
 
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
+        header {
+            background-color: #007bff;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .variation1,
+        .variation2 {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: blue;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        factor {
+            margin-bottom: 20px;
+        }
     </style>
-
-
 </head>
 
 <body>
 
     <script>
+        // JavaScript for "Les mer"
+        document.addEventListener("DOMContentLoaded", function () {
 
+            var variationSections = document.querySelectorAll('.variation2');
+
+
+            variationSections.forEach(function (section) {
+                var paragraphs = section.querySelectorAll('p.hidden');
+
+                paragraphs.forEach(function (paragraph) {
+                    var button = document.createElement('button');
+                    button.innerText = 'Les mer';
+                    button.addEventListener('click', function () {
+                        // Endre visningsstatus
+                        paragraph.classList.toggle('hidden');
+                    });
+
+                    // Ny knapp etter hvert avsnitt
+                    paragraph.insertAdjacentElement('afterend', button);
+                });
+            });
+        });
     </script>
 
     <header>
         <nav>
-            <div id="navbar"></div>
+            <div id="navbar">Navbar</div>
         </nav>
     </header>
 
@@ -31,55 +110,84 @@
             <h1>Generell info om konspirasjonsteorier</h1>
         </section>
 
-
         <section class="variation1">
             <h1>Hva er konspirasjonsteorier?</h1>
             <p>Konspirasjonsteorier er ideer som hevder at en hendelse eller serie hendelser skyldes en hemmelig
                 sammensvergelse utført av en skjult gruppe, vanligvis med onde hensikter, og ofte avviker fra offisielle
                 forklaringer eller etablerte fakta.
             </p>
-
         </section>
 
         <section class="variation2">
             <h2>Hvordan oppstår konspirasjonsteorier</h2>
 
+            <div class="factor">
+                <p>
+                    Konspirasjonsteorier oppstår av komplekse årsaker, og det er ikke én universell forklaring på
+                    fenomenet. Imidlertid er det flere faktorer som ofte spiller en rolle i dannelsen og spredningen av
+                    konspirasjonsteorier:
+                </p>
+            </div>
+
+            <div class="factor">
+
+                *Mangel på tillit:
+                <p class="hidden">Konspirasjonsteorier blomstrer ofte i samfunn der det er generell mistillit til
+                    myndigheter, institusjoner, og eksisterende autoriteter. Dette kan skyldes tidligere skandaler,
+                    korrupsjon eller andre faktorer som reduserer folks tro på den offisielle versjonen av hendelser.
+                </p>
+            </div>
+
+            <div class="factor">
+
+                *Usikkerhet og frykt:
+                <p class="hidden">I perioder med usikkerhet, uro eller krise søker mennesker ofte etter
+                    forklaringer som gir mening og kontroll. Konspirasjonsteorier tilbyr ofte en enkel, men feilaktig,
+                    forklaring på komplekse situasjoner og kan gi en følelse av kontroll eller forståelse.
+                </p>
+            </div>
+
+            <div class="factor">
+
+                *Kognitiv dissosians:
+                <p class="hidden"> Når mennesker blir utsatt for informasjon som motstrider deres eksisterende
+                    oppfatninger, kan det føre til kognitiv dissonans. Konspirasjonsteorier kan fungere som et middel
+                    for å
+                    redusere denne dissonansen ved å tilby en alternativ forklaring som er mer i tråd med
+                    enkeltpersoners
+                    eksisterende tro.
+                </p>
+            </div>
+
+            <div class="factor">
+
+                *Sosial påvirkning:
+                <p class="hidden">Mennesker er påvirkelige av sine sosiale omgivelser. Hvis personer i ens
+                    nærmiljø deler konspirasjonsteorier, øker sannsynligheten for at man selv omfavner slike ideer.
+                    Sosiale
+                    medier har også spilt en stor rolle i spredningen av konspirasjonsteorier ved å gi en plattform for
+                    rask
+                    og bred distribusjon av informasjon.
+                </p>
+            </div>
+
+            <div class="factor">
+
+                *Mangel på informasjonskompetanse:
+                <p class="hidden">Manglende evne til å vurdere informasjon kritisk
+                    kan bidra til
+                    aksept av konspirasjonsteorier. Mennesker som ikke er i stand til å skille mellom pålitelig og
+                    upålitelig informasjon, eller som mangler evnen til å søke etter alternative kilder og perspektiver,
+                    er
+                    mer sårbare for å omfavne konspirasjonsteorier.
+                </p>
+            </div>
+
             <p>
-
-                Konspirasjonsteorier oppstår av komplekse årsaker, og det er ikke én universell forklaring på fenomenet.
-                Imidlertid er det flere faktorer som ofte spiller en rolle i dannelsen og spredningen av
-                konspirasjonsteorier:
-
-                1. **Mangel på tillit:** Konspirasjonsteorier blomstrer ofte i samfunn der det er generell mistillit til
-                myndigheter, institusjoner, og eksisterende autoriteter. Dette kan skyldes tidligere skandaler,
-                korrupsjon eller andre faktorer som reduserer folks tro på den offisielle versjonen av hendelser.
-
-                2. **Usikkerhet og frykt:** I perioder med usikkerhet, uro eller krise søker mennesker ofte etter
-                forklaringer som gir mening og kontroll. Konspirasjonsteorier tilbyr ofte en enkel, men feilaktig,
-                forklaring på komplekse situasjoner og kan gi en følelse av kontroll eller forståelse.
-
-                3. **Kognitiv dissonans:** Når mennesker blir utsatt for informasjon som motstrider deres eksisterende
-                oppfatninger, kan det føre til kognitiv dissonans. Konspirasjonsteorier kan fungere som et middel for å
-                redusere denne dissonansen ved å tilby en alternativ forklaring som er mer i tråd med enkeltpersoners
-                eksisterende tro.
-
-                4. **Sosial påvirkning:** Mennesker er påvirkelige av sine sosiale omgivelser. Hvis personer i ens
-                nærmiljø deler konspirasjonsteorier, øker sannsynligheten for at man selv omfavner slike ideer. Sosiale
-                medier har også spilt en stor rolle i spredningen av konspirasjonsteorier ved å gi en plattform for rask
-                og bred distribusjon av informasjon.
-
-                5. **Mangel på informasjonskompetanse:** Manglende evne til å vurdere informasjon kritisk kan bidra til
-                aksept av konspirasjonsteorier. Mennesker som ikke er i stand til å skille mellom pålitelig og
-                upålitelig informasjon, eller som mangler evnen til å søke etter alternative kilder og perspektiver, er
-                mer sårbare for å omfavne konspirasjonsteorier.
-
-                Det er viktig å merke seg at disse faktorene ofte virker sammen, og ikke alle konspirasjonsteorier
+                *Det er viktig å merke seg at disse faktorene ofte virker sammen, og ikke alle konspirasjonsteorier
                 oppstår av de samme årsakene. Studier innen psykologi, sosiologi og kommunikasjon har bidratt til å
-                forstå de komplekse dynamikkene bak dannelsen av konspirasjonsteorier.</p>
-
-
-
-
+                forstå de komplekse dynamikkene bak dannelsen av konspirasjonsteorier.
+            </p>
         </section>
 
     </main>
