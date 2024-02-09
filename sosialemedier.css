@@ -22,7 +22,6 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 20px;
   }
   
 /* Second section with text to the right and image to the left */
@@ -32,7 +31,6 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 20px;
   }
   
 /* Third section with text to the left and right, and image in the center */
@@ -42,7 +40,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
   }
   
 /* Style for the images */
@@ -101,7 +98,6 @@ p {
     font-family: 'Josefin Sans';
     font-weight: 200;
     font-size: 25px;
-    background-color: inherit;
 }
 
 h1 {
@@ -124,8 +120,9 @@ h1 {
 }
 
 section {
-    width: 80%;
-    padding: 40px;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
 }
 
 /* Hero */
