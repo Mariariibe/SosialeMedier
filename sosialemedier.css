@@ -67,12 +67,13 @@
     --color4: #778da9;
     --color5: #e0e1dd;
     --color6: #ccdbdc;
+    --bakgrunnsfarge1:rgba(0, 0, 0, 0.505) ;
 }
 
 * {
     margin: 0;
     padding: 0;
-    background-color: var(--color6);
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -104,7 +105,6 @@ h1 {
     background-color: var(--color5);
 }
 
-<<<<<<< Updated upstream
 .variation2 {
     background-color: var(--color6);
 }
@@ -116,26 +116,34 @@ h1 {
 }
 
 section {
-    width: 80%;
     padding: 40px;
 }
 
-=======
 .2 {
     background-color: var(--color6);
 }
->>>>>>> Stashed changes
 /* Hero */
-.hero{
+.hero {
     position: relative;
-}
-<<<<<<< Updated upstream
-=======
-
-.video{
     width: 100%;
-    top: 0;
-    left: 0;
 }
 
->>>>>>> Stashed changes
+.hero > div {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+}
+
+.video video {
+    width: 100%;
+    object-fit: cover;
+}
+
+.gjennomsiktig {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: var(--bakgrunnsfarge1);
+    z-index: 2;
+}
