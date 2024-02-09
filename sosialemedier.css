@@ -17,6 +17,7 @@
   
 /* First section with text to the left and image to the right */
 .section1 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
