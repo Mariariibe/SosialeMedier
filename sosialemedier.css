@@ -104,6 +104,7 @@ h1 {
     background-color: var(--color5);
 }
 
+<<<<<<< Updated upstream
 .variation2 {
     background-color: var(--color6);
 }
@@ -119,8 +120,22 @@ section {
     padding: 40px;
 }
 
+=======
+.2 {
+    background-color: var(--color6);
+}
+>>>>>>> Stashed changes
 /* Hero */
 .hero{
     position: relative;
-
 }
+<<<<<<< Updated upstream
+=======
+
+.video{
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+>>>>>>> Stashed changes
