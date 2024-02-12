@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horisontal Tidslinje</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            color: black;
+            text-align: center;
+        }
+
+        header {
+            background-color: blue;
+            padding: 10px;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            overflow-x: auto;
+        }
+
+        .timeline-event {
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .timeline-description {
+            display: none;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tidslinje</h1>
+    </header>
+
+    <main>
+        <ul class="timeline" id="timeline">
+            <li>
+                <div class="timeline-event" onclick="toggleDescription('year2000')">
+                    2000
+                </div>
+                <div class="timeline-description" id="year2000">
+                    <p>Store hendelser som skjedde i 2000.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-event" onclick="toggleDescription('year2005')">
+                    2005
+                </div>
+                <div class="timeline-description" id="year2005">
+                    <p>Betydningsfulle hendelser i 2005.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-event" onclick="toggleDescription('year2010')">
+                    2010
+                </div>
+                <div class="timeline-description" id="year2010">
+                    <p>Historiske øyeblikk i 2010.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-event" onclick="toggleDescription('year2015')">
+                    2015
+                </div>
+                <div class="timeline-description" id="year2015">
+                    <p>Markante begivenheter i 2015.</p>
+                </div>
+            </li>
+
+
+        </ul>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function toggleDescription(yearId) {
+            var description = document.getElementById(yearId);
+            if (description.style.display === "none") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
