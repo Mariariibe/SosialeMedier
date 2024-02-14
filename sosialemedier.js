@@ -1,5 +1,4 @@
 
-// Hamburger meny
 function meny(x) {
-    x.classList.toggle("change");
-  }
+  x.classList.toggle("change");
+}

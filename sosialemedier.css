@@ -3,14 +3,14 @@
 
 body {
   margin: 0px;
+  font-family: 'Josefin Sans';
+  font-size: 15px;
 }
 
 /* Container for all sections */
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 0 auto;
   }
 
 .container p {
@@ -76,11 +76,13 @@ img {
     --color4: #778da9;
     --color5: #e0e1dd;
     --color6: #ccdbdc;
+    --bakgrunnsfarge1:rgba(0, 0, 0, 0.505) ;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -90,6 +92,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .navbar h1 {
@@ -122,6 +125,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 section {
@@ -130,16 +134,38 @@ section {
   padding: 40px;
 }
 
+.2 {
+    background-color: var(--color6);
+}
 /* Hero */
-.hero{
+.hero {
     position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
-.video{
+.hero > div {
+    position: absolute;
+    left:0;
+    top:0;
     width: 100%;
-    top: 0;
-    left: 0;
+    height: 100%;
 }
+
+.video video {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+.gjennomsiktig {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: var(--bakgrunnsfarge1);
+    z-index: 2;
+  }
 
 .menyknapp {
     display: inline-block;
