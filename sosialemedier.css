@@ -86,6 +86,9 @@ img {
 }
 
 
+
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -105,7 +108,7 @@ img {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: var(--color5);
 }
 
 .nav-menu {
@@ -163,7 +166,6 @@ img {
   .hamburger {
       display: block;
       cursor: pointer;
-      background-color: var(--color5)
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -180,6 +182,10 @@ img {
       transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+
+
+
 
 p {
     font-family: 'Josefin Sans';
