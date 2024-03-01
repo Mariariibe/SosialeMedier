@@ -5,8 +5,8 @@ let boardheight = 640
 let ctx
 
 //bird
-let birdwidth = 30
-let birdheight = 45
+let birdwidth = 70
+let birdheight = 40
 let birdx = boardwidth / 8
 let birdy = boardheight / 2
 let birdimage
@@ -20,8 +20,8 @@ let bird = {
 
 //pipes
 let pipeArray = []
-let pipeWidth = 100
-let pipeHeight = 512
+let pipeWidth = 120
+let pipeHeight = 470
 let pipex = boardwidth
 let pipey = 0
 
@@ -62,7 +62,7 @@ window.onload = function () {
         document.addEventListener("keydown", moveBird)
         ctx.fillStyle = "rgba(0, 0, 0, 0.5)"
         ctx.fillRect(0, 0, boardwidth, boardheight)
-        ctx.fillStyle = "pink"
+        ctx.fillStyle = "white"
         ctx.font = "27px sans-serif"
         ctx.fillText("Trykk på Space for å starte", 20, 320)
     }
@@ -128,7 +128,7 @@ function update() {
         ctx.fillStyle = "rgba(0, 0, 0, 0.5)"
         ctx.fillRect(0, 0, boardwidth, boardheight)
 
-        ctx.fillStyle = "pink"
+        ctx.fillStyle = "white"
         ctx.fillText(score, 165, 100)
         ctx.fillText("GAME OVER", 40, 300)
         if (score < highscore) {

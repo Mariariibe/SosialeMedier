@@ -61,6 +61,7 @@ img {
     text-decoration: none;
     color: #3498db;
     font-weight: bold;
+    font-size: 15px;
   }
   
 /* Hover effect for the "read more" link */
@@ -291,6 +292,7 @@ section {
   text-align: center;
   padding: 20px;
   z-index: 2;
+
 <<<<<<< Updated upstream
   max-width: 1000px;
   max-height: 800px;
