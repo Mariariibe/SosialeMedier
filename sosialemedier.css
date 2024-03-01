@@ -85,16 +85,13 @@ img {
     box-sizing: border-box;
 }
 
-
-
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 40px;
   background-color: var(--color1);
+  color: var(--color5);
 }
 
 .hamburger {
@@ -182,10 +179,6 @@ img {
       transform: translateY(-8px) rotate(-45deg);
   }
 }
-
-
-
-
 
 p {
     font-family: 'Josefin Sans';
@@ -298,10 +291,23 @@ section {
   text-align: center;
   padding: 20px;
   z-index: 2;
+<<<<<<< Updated upstream
   max-width: 1000px;
   max-height: 800px;
 }
 
 .overlay p {
   font-size: 50px;
+=======
+  max-width: 800px;
+  max-height: 300px;
+}
+
+
+.sectionskons{
+  background-color: var(--color4);
+  border-radius: 20px;
+  padding: 30px;
+  
+>>>>>>> Stashed changes
 }
