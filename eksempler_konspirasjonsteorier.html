@@ -4,142 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horisontal Tidslinje</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: white;
-            color: black;
-            text-align: center;
-        }
-
-        header {
-            background-color: blue;
-            padding: 10px;
-            color: white;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            overflow-x: auto;
-        }
-
-        .timeline-event {
-            cursor: pointer;
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-
-        .timeline-description {
-            display: none;
-            padding: 10px;
-            background-color: white;
-            border-radius: 5px;
-            width: 100%;
-        }
-    </style>
+    <title>Vertikal Tidslinje</title>
+    <link rel="stylesheet" href="V_Timeline.css">
 </head>
 
 <body>
+    <div class="timeline">
+        <div class="timeline_component">
+            <div class="timeline_date timeline_date--right">...</div>
+        </div>
+        <div class="timeline_middle">
+            <div class="timeline_point"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline_component  timeline_component--bg">
+                <h2 class="timeline_title">Published First Video</h2>
+                <p class="timeline_paragraph">
+                    Bla bla bla bla
+                </p>
+            </div>
+            <div class="timeline_component  timeline_component--bg">
+                <h2 class="timeline_title">Published First Video</h2>
+                <p class="timeline_paragraph">
+                    Bla bla bla bla
+                </p>
+            </div>
+            <div class="timeline_middle">
+                <div class="timeline_point"></div>
+            </div>
+            <div class="timeline_component">
+                <div class="timeline_date timeline_date--right">...</div>
+            </div>
+        </div>
 
-    <header>
-        <h1>Tidslinje</h1>
-    </header>
-
-    <main>
-        <ul class="timeline" id="timeline">
-            <li>
-                <div class="timeline-event" onclick="toggleDescription('year1963')">
-                    Kennedy-assassinasjonen (1963):
-                </div>
-                <div class="timeline-description" id="year1963">
-                    <p>Etter drapet på president John F. Kennedy har det oppstått utallige konspirasjonsteorier som
-                        utfordrer den offisielle forklaringen om at Lee Harvey Oswald handlet alene. Noen av teoriene
-                        hevder at det var en større sammensvergelse involvert. Dette har ført til en vedvarende
-                        mistillit til offisielle rapporter og myndighetenes informasjon.</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-event" onclick="toggleDescription('year1969')">
-                    Månelandingen (1969):
-                </div>
-                <div class="timeline-description" id="year1969">
-                    <p>Konspirasjonsteorien hevder at de amerikanske månelandingene var en iscenesatt begivenhet og at
-                        bildene og videoene som ble sendt tilbake til jorden var produsert på jorden. Teorien fikk stort
-                        fotfeste på 1970-tallet og har fortsatt en viss tilhengerskare. Den ble forsterket av hendelser
-                        som Watergate-skandalen og generell mistillit til myndighetene.</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-event" onclick="toggleDescription('year2000')">
-                    Menneskeskapte klimaendringer (2000-tallet):
-                </div>
-                <div class="timeline-description" id="year2000">
-                    <p>En konspirasjonsteori som har vunnet terreng hevder at vitenskapelige rapporter om menneskeskapte
-                        klimaendringer er overdrevne eller manipulerte. Denne teorien har blitt brukt av enkelte grupper
-                        for å avvise behovet for klimatiltak og har skapt polarisering i klimadebatten.</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-event" onclick="toggleDescription('year2001')">
-                    9/11-angrepene (2001):
-                </div>
-                <div class="timeline-description" id="year2001">
-                    <p>Konspirasjonsteorier rundt terrorangrepene den 11. september 2001 hevder at regjeringen eller
-                        andre aktører hadde kjennskap til, eller aktivt deltok i, planleggingen og gjennomføringen av
-                        angrepene. Disse teoriene har blitt bredt avvist av eksperter og granskingskommisjoner, men de
-                        har likevel vedvart og påvirket folks syn på hendelsene.</p>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-event" onclick="toggleDescription('year2020')">
-                    COVID-19-pandemien (2019-2020):
-                </div>
-                <div class="timeline-description" id="year2020">
-                    <p>En rekke konspirasjonsteorier har oppstått rundt COVID-19-pandemien, inkludert påstander om at
-                        viruset ble skapt i et laboratorium med vilje, at vaksiner inneholder mikrochip for overvåkning,
-                        eller at hele pandemien er en del av en global kontrollagenda. Disse teoriene har blitt spredt
-                        gjennom sosiale medier og har ført til økt usikkerhet og mistillit.</p>
-                </div>
-            </li>
-
-
-
-        </ul>
-    </main>
-
-    <footer></footer>
-
-    <script>
-        function toggleDescription(yearId) {
-            var description = document.getElementById(yearId);
-            if (description.style.display === "none") {
-                description.style.display = "block";
-            } else {
-                description.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 
