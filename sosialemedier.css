@@ -293,14 +293,12 @@ section {
   padding: 20px;
   z-index: 2;
 
-<<<<<<< Updated upstream
   max-width: 1000px;
   max-height: 800px;
 }
 
 .overlay p {
   font-size: 50px;
-=======
   max-width: 800px;
   max-height: 300px;
 }
@@ -311,5 +309,4 @@ section {
   border-radius: 20px;
   padding: 30px;
   
->>>>>>> Stashed changes
 }
