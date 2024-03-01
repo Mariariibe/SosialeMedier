@@ -7,6 +7,76 @@
     <title>Eksempler på konspirasjonsteorier</title>
     <link rel="stylesheet" href="V_Timeline.css">
 
+    <style>
+        body {
+            background: #10997e;
+            padding: 25px;
+            font-family: "Fira Sans", sans-serif;
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .timeline {
+            margin: 0 auto;
+            max-width: 750px;
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+        }
+
+        .timeline__component {
+            margin: 0 20px 20px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 2s ease, transform 2s ease;
+        }
+
+        .timeline__component--bg {
+            padding: 1.5em;
+            background: rgba(204, 199, 199, 0.2);
+            box-shadow: 0 0 5px rgba(12, 12, 12, 0.2);
+            border-radius: 10px;
+        }
+
+        .timeline__middle {
+            position: relative;
+            background: #ffffff;
+        }
+
+        .timeline__point {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 15px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .timeline__point--bottom {
+            top: initial;
+            bottom: 0;
+        }
+
+        .timeline__date--right {
+            text-align: right;
+        }
+
+        .timeline__title {
+            margin: 0;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+
+        .timeline__paragraph {
+            line-height: 1.5;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -80,6 +150,37 @@
             <div class="timeline__date">2020</div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var timelineComponents = document.querySelectorAll('.timeline__component');
+
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function animateTimelineComponents() {
+                timelineComponents.forEach(function (component) {
+                    if (isInViewport(component)) {
+                        component.style.opacity = 1;
+                        component.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            animateTimelineComponents();
+
+            window.addEventListener('scroll', function () {
+                animateTimelineComponents();
+            });
+        });
+    </script>
 
 </body>
 
