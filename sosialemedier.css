@@ -220,6 +220,10 @@ section {
 
 }
 
+.herogeninfo{
+  background-image: url(medier/hero1.jpg);
+}
+
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
