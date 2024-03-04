@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@keyframes rist {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Nunito'
+}
+
+body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height:100vh;
+    background: skyblue;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.overskrift{
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: slateblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+
+}
+
+button {
+    background-color: lightblue;
+    border: none;
+    color: white;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 5%;
+}
+.brett{
+    height:400px;
+    width:400px;
+    background: white;
+    border-radius: 5%;
+    padding: 25px;
+}
+
+.brikker .kort{
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+    cursor:pointer;
+} 
+
+.brikker{
+    height: 100%;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.brikker, .kort, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.brikker .kort .view{
+    width:100%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25)
+}
+
+.kort .forside span{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color:skyblue;
+}
+
+.kort .forside {
+    display: block;
+}
+
+.kort .bakside {
+    display: none;
+}
+.kort .bakside img{
+    max-width: 70px;
+}
+
+.valgt{
+    background-color: skyblue;
+    z-index: 20;
+    border-radius: 5%;
+}
+
+.valgt .forside{
+    display: none;
+}
+.valgt .bakside{
+    display: block;
+}
+
+.sjekket .forside{
+    display: none;
+}
+
+.sjekket .bakside{
+    display: block;
+}
+.sjekket{
+    background-color: aquamarine;
+    border-radius: 5%;
+}
+
+.feil{
+    background-color: lightcoral;
+    animation: rist 0.5s;
+}
