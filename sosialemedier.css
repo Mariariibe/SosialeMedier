@@ -180,6 +180,13 @@ img {
   }
 }
 
+<<<<<<< Updated upstream
+=======
+
+h1 {
+    font-weight: 400;
+}
+>>>>>>> Stashed changes
 
 .variation1 {
   background-color: var(--color5);
@@ -201,7 +208,27 @@ section {
   width: 100%;
   padding: 40px;
 }
+.istor {
+  border: 7px solid var(--color3);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 120px;
+  margin-left: 5%;
+  color: var(--color3);
+}
+.hjelpsection div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 
+}
+
+.hjelpsection{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
 /* Hero */
 .hero {
@@ -216,6 +243,10 @@ section {
   background-image: url(medier/hero1.jpg);
 }
 
+
+.container img{
+  max-width: 400px;
+}
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
