@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    text-align: center;
+    padding: 50px;
+    background-color: whitesmoke;
+    transition: background-color 1s;
+}
+
+h1 {
+    color: darkslategray;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+
+h2 {
+    color: darkslategrey;
+    margin-bottom: 30px;
+}
+
+#resultat,
+#forsøk {
+    margin-top: 30px;
+    font-size: 30px;
+    color: whitesmoke
+}
+
+#forsøk {
+    font-size: 20px;
+    color: wheat
+}
+
+#gjette-skjema {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gjettet {
+    width: 225px;
+    height: 40px;
+    font-size: 15px;
+    padding: 10px;
+    color: gray;
+    margin-right: 10px;
+}
+
+#knapp {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+#knapp:hover {
+    background-color: darkgreen;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+#hangman-img {
+    width: 400px;
+    border: solid 5px;
+    padding: 25px;
+    background-color: white;
+}
+
+.pil-opp,
+.pil-ned {
+    font-size: 40px;
+    color: gray;
+}

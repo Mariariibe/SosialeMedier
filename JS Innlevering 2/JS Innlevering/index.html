@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <h1>Guess the number - Hangman</h1>
+
+    <h2>Henrik tenker på et tall mellom 1-100. Du har syv forsøk på å gjette riktig tall, hvis ikke blir den uskyldige
+        personen hengt! </h2>
+
+    <p id="resultat"></p>
+    <p id="forsøk"></p>
+    <audio id="riktiglyd" src="media/ding.mp3"></audio>
+    <audio id="feillyd" src="media/buzzer.mp3"></audio>
+    <audio id="heartbeat" src="media/heartbeat.mp3"></audio>
+    <form id="gjette-skjema">
+        <input type="number" id="gjettet" min="1" max="100" placeholder="Skriv et tall mellom 1-100!">
+        <button type="submit" id="knapp">Gjett</button>
+    </form>
+
+    <div class="container">
+        <div class="hangman-box">
+            <img id="hangman-img" src="bilder/hangman-0.svg" alt="hangman-img">
+        </div>
+    </div>
+
+</body>
+
+</html>
