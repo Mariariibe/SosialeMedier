@@ -1,42 +1,115 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertikal Tidslinje</title>
+    <title>Eksempler på konspirasjonsteorier</title>
     <link rel="stylesheet" href="V_Timeline.css">
+    <script src="sosialemedier.js"></script>
+
 </head>
 
 <body>
-    <div class="timeline">
-        <div class="timeline_component">
-            <div class="timeline_date timeline_date--right">...</div>
-        </div>
-        <div class="timeline_middle">
-            <div class="timeline_point"></div>
-        </div>
-        <div class="timeline">
-            <div class="timeline_component  timeline_component--bg">
-                <h2 class="timeline_title">Published First Video</h2>
-                <p class="timeline_paragraph">
-                    Bla bla bla bla
-                </p>
-            </div>
-            <div class="timeline_component  timeline_component--bg">
-                <h2 class="timeline_title">Published First Video</h2>
-                <p class="timeline_paragraph">
-                    Bla bla bla bla
-                </p>
-            </div>
-            <div class="timeline_middle">
-                <div class="timeline_point"></div>
-            </div>
-            <div class="timeline_component">
-                <div class="timeline_date timeline_date--right">...</div>
-            </div>
-        </div>
 
+    <h1>
+        Eksempler på konspirasjonsteorier
+    </h1>
+
+    <div class="timeline">
+        <div class="timeline__component">
+            <div class="timeline__date timeline__date--right">1800-tallet</div>
+        </div>
+        <div class="timeline__middle">
+            <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component timeline__component--bg">
+            <h2 class="timeline__title">Jorden er flat</h2>
+            <p class="timeline__paragraph">
+                Konspirasjonsteorien om at jorden er flat hevder at jorden ikke har en rund form, men flat. Tilhengerne
+                av denne teorien avviser vitenskapelige bevis som viser at
+                jorden er rund, og de hevder at informasjonen er manipulert av myndigheter eller skjult for å
+                kontrollere befolkningen.
+            </p>
+        </div>
+        <div class="timeline__component timeline__component--bg">
+            <h2 class="timeline__title">Den første månelandingen var falsk</h2>
+            <p class="timeline__paragraph">
+                Teorien om at månelandingen var falsk påstår at NASA simulerte hendelsen for å vinne romkappløpet. Dette
+                avvises av vitenskapen og er bredt anerkjent som konspirasjon uten bevis.
+            </p>
+        </div>
+        <div class="timeline__middle">
+            <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component">
+            <div class="timeline__date">1969</div>
+        </div>
+        <div class="timeline__component">
+            <div class="timeline__date timeline__date--right">2001</div>
+        </div>
+        <div class="timeline__middle">
+            <div class="timeline__point"></div>
+        </div>
+        <div class="timeline__component timeline__component--bg">
+            <h2 class="timeline__title">Amerikanske myndigheter stod bak 9/11</h2>
+            <p class="timeline__paragraph">
+
+                Konspirasjonsteorien om 9/11 hevder feilaktig at myndighetene i USA var involvert i eller hadde
+                kjennskap til terrorangrepene den 11. september 2001. Tilhengerne av denne teorien antyder at angrepene
+                var en innsidetrussel utført for å rettferdiggjøre krig og begrense
+                borgernes friheter.
+            </p>
+        </div>
+        <div class="timeline__component timeline__component--bottom timeline__component--bg">
+            <h2 class="timeline__title">Korona-pandemien er falsk</h2>
+            <p class="timeline__paragraph">
+                Konspirasjonsteorien om at korona-pandemien er fake hevder at COVID-19 ikke er ekte, men heller en
+                planlagt. Tilhengere av denne teorien hevder ofte at pandemien ble til
+                for å kontrollere befolkningen eller manipulere økonomien.
+            </p>
+        </div>
+        <div class="timeline__middle">
+            <div class="timeline__point"></div>
+            <div class="timeline__point timeline__point--bottom"></div>
+        </div>
+        <div class="timeline__component timeline__component--bottom">
+            <div class="timeline__date">2020</div>
+        </div>
+    </div>
+
+    <script>
+        // Følgende Javascript kode hører til siden eksempler_konspirasjonsteorier
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var timelineComponents = document.querySelectorAll('.timeline__component');
+
+            function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function animateTimelineComponents() {
+                timelineComponents.forEach(function (component) {
+                    if (isInViewport(component)) {
+                        component.style.opacity = 1;
+                        component.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            animateTimelineComponents();
+
+            window.addEventListener('scroll', function () {
+                animateTimelineComponents();
+            });
+        });
+    </script>
 
 </body>
 
