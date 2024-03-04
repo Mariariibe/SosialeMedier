@@ -5,27 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            text-align: center;
+            padding: 50px;
+            background-color: whitesmoke;
+            transition: background-color 1s;
+        }
+
+        h1 {
+            color: darkslategray;
+            margin-bottom: 10px;
+            padding-bottom: 25px;
+        }
+
+        h2 {
+            color: darkslategrey;
+            margin-bottom: 30px;
+        }
+
+        #resultat,
+        #forsøk {
+            margin-top: 30px;
+            font-size: 30px;
+            color: whitesmoke
+        }
+
+        #forsøk {
+            font-size: 20px;
+            color: wheat
+        }
+
+        #gjette-skjema {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #gjettet {
+            width: 225px;
+            height: 40px;
+            font-size: 15px;
+            padding: 10px;
+            color: gray;
+            margin-right: 10px;
+        }
+
+        #knapp {
+            width: 100px;
+            height: 40px;
+            font-size: 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        #knapp:hover {
+            background-color: darkgreen;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        #hangman-img {
+            width: 400px;
+            border: solid 5px;
+            padding: 25px;
+            background-color: white;
+        }
+
+        .pil-opp,
+        .pil-ned {
+            font-size: 40px;
+            color: gray;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <h1>Guess the number - Hangman</h1>
+    <h1>Hangman Game</h1>
 
-    <h2>Henrik tenker på et tall mellom 1-100. Du har syv forsøk på å gjette riktig tall, hvis ikke blir den uskyldige
-        personen hengt! </h2>
+    <h2>Henrik tenker på et ord. Gjett bokstavene!</h2>
 
     <p id="resultat"></p>
     <p id="forsøk"></p>
+    <p id="ord-container"></p> <!-- Legg til et element for å vise ordet -->
     <audio id="riktiglyd" src="media/ding.mp3"></audio>
     <audio id="feillyd" src="media/buzzer.mp3"></audio>
     <audio id="heartbeat" src="media/heartbeat.mp3"></audio>
-    <form id="gjette-skjema">
-        <input type="number" id="gjettet" min="1" max="100" placeholder="Skriv et tall mellom 1-100!">
-        <button type="submit" id="knapp">Gjett</button>
-    </form>
 
     <div class="container">
         <div class="hangman-box">
@@ -33,6 +115,75 @@
         </div>
     </div>
 
+    <form id="gjette-skjema">
+        <input type="text" maxlength="1" id="gjettet" placeholder="Skriv en bokstav">
+        <button type="button" id="knapp">Gjett</button>
+    </form>
+
+    <script>
+        // Definerer konstanter og variabler
+        const ordListe = ["programming", "hangman", "javascript", "developer", "openai"];
+        let riktigOrd = ordListe[Math.floor(Math.random() * ordListe.length)];
+        let gjettedeBokstaver = [];
+        let forsøk = 0;
+        let maksForsøk = 7;
+        let resultatElement = document.getElementById("resultat");
+        let forsøkElement = document.getElementById("forsøk");
+        let ordContainer = document.getElementById("ord-container");
+        const gjetteSkjema = document.getElementById("gjette-skjema");
+        const hangmanBilde = document.getElementById("hangman-img");
+
+        // Sett inn det tilfeldige ordet i ordContainer
+        ordContainer.textContent = "Ordet: " + riktigOrd.split("").map(() => "_").join(" ");
+
+        // Gjette-skjema
+        document.getElementById("knapp").addEventListener("click", function () {
+            const gjett = document.getElementById("gjettet").value.toLowerCase();
+
+            if (!gjett.match(/[a-z]/)) {
+                alert("Skriv inn en gyldig bokstav!");
+                return;
+            }
+
+            if (gjettedeBokstaver.includes(gjett)) {
+                alert("Du har allerede gjettet denne bokstaven!");
+                return;
+            }
+
+            gjettedeBokstaver.push(gjett);
+            forsøk++;
+
+            // Logikk for å sjekke om bokstaven er i det riktige ordet
+            let riktigGjettet = true;
+            let vistOrd = riktigOrd.split("").map(bokstav => gjettedeBokstaver.includes(bokstav) ? bokstav : "_").join(" ");
+
+            if (vistOrd === riktigOrd) {
+                riktigGjettet = true;
+            }
+
+            if (riktigGjettet) {
+                resultatElement.textContent = "Gratulerer! Du gjettet riktig ord: " + riktigOrd;
+                document.body.style.backgroundColor = "green";
+                gjetteSkjema.style.display = "none";
+                forsøkElement.textContent = "Antall Forsøk: " + forsøk;
+                var audio = document.getElementById("riktiglyd");
+                audio.play();
+            } else {
+                resultatElement.textContent = "Gjettet bokstav: " + gjett;
+                forsøkElement.textContent = "Antall Forsøk: " + forsøk;
+                ordContainer.textContent = "Ordet: " + vistOrd;
+                hangmanBilde.src = "bilder/hangman-" + forsøk + ".svg";
+
+                if (forsøk >= maksForsøk) {
+                    document.body.style.backgroundColor = "red";
+                    gjetteSkjema.style.display = "none";
+                    resultatElement.textContent = "Game over! Riktig ord var: " + riktigOrd;
+                    var audio = document.getElementById("feillyd");
+                    audio.play();
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
