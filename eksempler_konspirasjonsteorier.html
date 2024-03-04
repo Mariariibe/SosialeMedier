@@ -5,7 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksempler på konspirasjonsteorier</title>
-    <link rel="stylesheet" href="V_Timeline.css">
+
+
+    <style>
+        body {
+            background: #10997e;
+            padding: 25px;
+            font-family: "Fira Sans", sans-serif;
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .timeline {
+            margin: 0 auto;
+            max-width: 750px;
+            display: grid;
+            grid-template-columns: 1fr 3px 1fr;
+        }
+
+        .timeline__component {
+            margin: 0 20px 20px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 2s ease, transform 2s ease;
+        }
+
+        .timeline__component--bg {
+            padding: 1.5em;
+            background: rgba(204, 199, 199, 0.2);
+            box-shadow: 0 0 5px rgba(12, 12, 12, 0.2);
+            border-radius: 10px;
+        }
+
+        .timeline__middle {
+            position: relative;
+            background: #ffffff;
+        }
+
+        .timeline__point {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 15px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .timeline__point--bottom {
+            top: initial;
+            bottom: 0;
+        }
+
+        .timeline__date--right {
+            text-align: right;
+        }
+
+        .timeline__title {
+            margin: 0;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+
+        .timeline__paragraph {
+            line-height: 1.5;
+        }
+
+        .timeline__component--bg:hover {
+            background: rgb(136, 158, 133);
+            box-shadow: 0 0 10px rgba(12, 12, 12, 0.3);
+            padding: 40px;
+        }
+
+        .timeline__component--bg:hover h2,
+        .timeline__component--bg:hover p {
+            color: black;
+            font-size: 25px;
+        }
+    </style>
 
 </head>
 
@@ -25,11 +107,10 @@
         <div class="timeline__component timeline__component--bg">
             <h2 class="timeline__title">Jorden er flat</h2>
             <p class="timeline__paragraph">
-                Konspirasjonsteorien om at jorden er flat hevder feilaktig at jorden ikke er en sfærisk form, men i
-                stedet flat som en pannekake. Tilhengerne av denne teorien avviser vitenskapelige bevis som viser at
-                jorden er rund, og de hevder at informasjonen er manipulert av myndigheter eller skjult av en hemmelig
-                elite for å kontrollere befolkningen. Teorien mangler vitenskapelig støtte og er grundig avvist av
-                astronomi, geofysikk og andre relevante fagområder.
+                Konspirasjonsteorien om at jorden er flat hevder at jorden ikke har en rund form, men flat. Tilhengerne
+                av denne teorien avviser vitenskapelige bevis som viser at
+                jorden er rund, og de hevder at informasjonen er manipulert av myndigheter eller skjult for å
+                kontrollere befolkningen.
             </p>
         </div>
         <div class="timeline__component timeline__component--bg">
@@ -57,19 +138,16 @@
 
                 Konspirasjonsteorien om 9/11 hevder feilaktig at myndighetene i USA var involvert i eller hadde
                 kjennskap til terrorangrepene den 11. september 2001. Tilhengerne av denne teorien antyder at angrepene
-                var en innsidetrussel eller et falskt flagg-operasjon utført for å rettferdiggjøre krig og begrense
-                borgernes friheter. Denne teorien mangler vitenskapelig og faktuell støtte, og offisielle
-                etterforskninger har bekreftet at angrepene ble utført av ekstreme islamistiske terrorgrupper.
+                var en innsidetrussel utført for å rettferdiggjøre krig og begrense
+                borgernes friheter.
             </p>
         </div>
         <div class="timeline__component timeline__component--bottom timeline__component--bg">
             <h2 class="timeline__title">Korona-pandemien er falsk</h2>
             <p class="timeline__paragraph">
-                Konspirasjonsteorien om at korona-pandemien er fake hevder at COVID-19 ikke er reell, men heller en
-                planlagt eller fabrikkert hendelse. Tilhengere av denne teorien hevder ofte at pandemien er iscenesatt
-                for å kontrollere befolkningen, manipulere økonomien eller oppnå andre skjulte mål. Det er viktig å
-                merke seg at denne teorien mangler vitenskapelig støtte og er bredt avvist av eksperter innen medisin og
-                folkehelse.
+                Konspirasjonsteorien om at korona-pandemien er fake hevder at COVID-19 ikke er ekte, men heller en
+                planlagt. Tilhengere av denne teorien hevder ofte at pandemien ble til
+                for å kontrollere befolkningen eller manipulere økonomien.
             </p>
         </div>
         <div class="timeline__middle">
@@ -80,7 +158,6 @@
             <div class="timeline__date">2020</div>
         </div>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var timelineComponents = document.querySelectorAll('.timeline__component');
@@ -110,9 +187,7 @@
                 animateTimelineComponents();
             });
         });
-
     </script>
-
 
 </body>
 
