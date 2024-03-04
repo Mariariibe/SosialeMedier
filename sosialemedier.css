@@ -323,3 +323,8 @@ section {
   gap: 10px;
 }
 
+.hjelpsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
