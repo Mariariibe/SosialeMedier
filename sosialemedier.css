@@ -123,7 +123,6 @@ img {
   font-size: 25px;
   font-weight: 400;
   color: var(--color5);
-  font-family: "kanit";
   text-decoration: none;
 }
 
@@ -182,13 +181,11 @@ img {
 }
 
 p {
-    font-family: 'Josefin Sans';
     font-weight: 200;
     font-size: 25px;
 }
 
 h1 {
-    font-family: 'Kanit';
     font-weight: 400;
 }
 
@@ -322,7 +319,3 @@ section {
   gap: 10px;
 }
 
-.sectionkons h2{
-  
-
-}
