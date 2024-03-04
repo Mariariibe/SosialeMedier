@@ -127,7 +127,7 @@ img {
 }
 
 .nav-link:hover {
-  color: #482ff7;
+  font-weight: bold;
 }
 
 .nav-logo {
