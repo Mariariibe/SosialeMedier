@@ -219,9 +219,11 @@ section {
     position: relative;
     width: 100%;
     height: 100vh;
+    background-image: url(medier/konsekvens3.jpg);
 
 }
 
+/* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
   left:0;
@@ -235,7 +237,7 @@ section {
     object-fit: cover;
     height: 100%;
 }
-
+*/
 
 .gjennomsiktig {
     display: flex;
@@ -307,6 +309,20 @@ section {
 .sectionskons{
   background-color: var(--color4);
   border-radius: 20px;
-  padding: 30px;
+  padding: 100px; 
+  margin-top: 800px;
+}
+
+.sectionskons section {
+  background-color: #ccdbdc;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionkons h2{
   
+
 }
