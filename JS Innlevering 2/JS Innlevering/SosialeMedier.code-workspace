@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "SosialeMedier",
+			"path": "../../../SosialeMedier"
+		},
+		{
+			"name": "JS Innlevering",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SosialeMedier"
+	}
+}
