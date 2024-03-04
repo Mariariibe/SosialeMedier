@@ -1,68 +1,77 @@
-// Definerer konstanter og variabler
+const wordList = ['javascript', 'HyperText Markup Language', 'Programmering', 'Inspect', 'Rasmus', 'Infomarsjonsteknologi'];
+let selectedWord = '';
+let hiddenWord = [];
+let remainingAttempts = 6;
+let guessedLetters = [];
 
-const riktigTall = Math.floor(Math.random() * 100) + 1;
-let forsøk = 0;
-let resultatElement = document.getElementById("resultat");
-let forsøkElement = document.getElementById("forsøk");
-const gjetteSkjema = document.getElementById("gjette-skjema");
-const hangmanBilde = document.getElementById("hangman-img");
 
-// Gjette-skjema, preventDefault hindrer at siden laster inn på nytt, const gjett henter verdi fra IDen "gjettet", dette blir til et tall. 0 er standardverdi.
-//forsøk++ fører til at gjetteforsøk øker med 1 for hver gang man gjetter.
+function newGame() {
+    selectedWord = wordList[Math.floor(Math.random() * wordList.length)];
+    hiddenWord = Array.from(selectedWord).fill('_');
+    remainingAttempts = 6;
+    guessedLetters = [];
 
-gjetteSkjema.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const gjett = parseInt(document.getElementById("gjettet").value) || 0;
-    console.log("Du gjettet " + gjett)
-    forsøk++;
+    updateDisplay();
+}
 
-    // Hvis man gjetter for lavt, får man beskjed om at tallet er høyere.
+function updateDisplay() {
+    document.getElementById('remainingAttempts').textContent = remainingAttempts;
+    document.getElementById('message').textContent = '';
+    document.getElementById('guessInput').value = '';
+    document.getElementById('guessInput').disabled = false;
+    document.querySelector('button').disabled = false;
+    document.body.style.backgroundColor = '';
 
-    if (gjett < riktigTall) {
-        resultatElement.innerHTML = "For lavt! <span class='pil-opp'>&#8593;</span>";
-        hangmanBilde.src = "bilder/hangman-" + forsøk + ".svg";
-        document.body.style.backgroundColor = "rgb(255, " + (255 - 40 * forsøk) + ", 0)";
+    displayWord();
+}
+
+function displayWord() {
+    document.getElementById('wordContainer').textContent = hiddenWord.join(' ');
+}
+
+function guessLetter() {
+    const guessInput = document.getElementById('guessInput');
+    const message = document.getElementById('message');
+
+    if (remainingAttempts > 0 && guessInput.value.length === 1) {
+        const guessedLetter = guessInput.value.toLowerCase();
+
+        message.textContent = '';
+
+        if (!guessedLetters.includes(guessedLetter)) {
+            guessedLetters.push(guessedLetter);
+
+            if (selectedWord.includes(guessedLetter)) {
+                for (let i = 0; i < selectedWord.length; i++) {
+                    if (selectedWord[i] === guessedLetter) {
+                        hiddenWord[i] = guessedLetter;
+                    }
+                }
+
+                if (!hiddenWord.includes('_')) {
+                    message.textContent = 'Gratulerer! Du har gjettet riktig ord.';
+                    guessInput.disabled = true;
+                    document.querySelector('button').disabled = true;
+                    document.body.style.backgroundColor = 'green';
+                }
+            } else {
+                remainingAttempts--;
+            }
+
+            updateDisplay();
+
+            if (remainingAttempts === 0) {
+                message.textContent = `Beklager, du har brukt opp alle forsøk. Riktig ord var "${selectedWord}".`;
+                guessInput.disabled = true;
+                document.querySelector('button').disabled = true;
+                document.body.style.backgroundColor = 'red';
+            }
+        } else {
+            message.textContent = 'Du har allerede gjettet denne bokstaven. Prøv en annen.';
+        }
     }
-
-    // Hvis man gjetter for høyt, får man beskjed om at tallet er lavere.
-
-    else if (gjett > riktigTall) {
-        resultatElement.innerHTML = "For høyt! <span class='pil-ned'>&#8595;</span>";
-        hangmanBilde.src = "bilder/hangman-" + forsøk + ".svg";
-        document.body.style.backgroundColor = "rgb(255, " + (255 - 40 * forsøk) + ", 0)";
-    }
-
-    // Hvis man ikke gjetter for høyt eller for lavt har man riktig tall! 
-    // Da blir skjermen grønn og man får vite hvor mange forsøk man brukte på å gjette riktig tall.
-    // Gjetteskjemaet forsvinner slik at man ikke kan gjette på nytt, man får også en "riktiglyd" og skjermen blir grønn.
-
-    else {
-        resultatElement.textContent = "Gratulerer! Du gjettet riktig tall på " + forsøk + " forsøk.";
-        document.body.style.backgroundColor = "green";
-        gjetteSkjema.style.display = "none";
-        forsøkElement.textContent = "Antall Forsøk: " + forsøk;
-        var audio = document.getElementById("riktiglyd");
-        audio.play();
-    }
-
-    // Lager en varsel fra JS om at man bare har ett forsøk igjen på å gjette riktig svar. Legger også til "heartbeat" lyd for å skape et spenningsmoment.
-
-    if (forsøk == 6 && gjett !== riktigTall) {
-        alert("Du har bare ett forsøk igjen, velg med omhu!");
-        var audio = document.getElementById("heartbeat");
-        audio.play()
-    }
-
-    // Hvis man bruker 7 forsøk og ikke har fått riktig svar, får man beskjed om at det er Game over. Skjermen blir rød, og man får en "feillyd". 
-    // I tillegg forsvinner submit/gjette-skjemaet, slik at man ikke kan gjette flere ganger.
-
-    if (forsøk >= 7 && gjett !== riktigTall) {
-        resultatElement.textContent = "Game over! Riktig tall var " + riktigTall + ".";
-        document.body.style.backgroundColor = "red";
-        gjetteSkjema.style.display = "none";
-        var audio = document.getElementById("feillyd");
-        audio.play();
-    }
-});
+}
 
 
+// Kall newGame() for å starte det første spillet
+newGame();
