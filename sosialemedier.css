@@ -140,7 +140,7 @@ img {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   .nav-menu {
       position: fixed;
       left: -100%;
@@ -303,5 +303,64 @@ section {
 }
 
 .overlay p {
-  font-size: 50px;
+  font-size: 40px;
+}
+
+@media (max-width: 970px) {
+  .overlay {
+    padding: 10px; 
+    max-width: 90%; 
+    max-height: 90%; 
+    top: calc(50% + 50px);
+  }
+
+  .overlay p {
+    font-size: 24px; 
+  }
+
+
+}
+
+@media (max-height: 1000px) {
+  .overlay {
+    max-width: 500px;
+    max-height: 300px;
+    top: calc(50% + 50px);
+  }
+
+  .overlay p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .overlay {
+    max-width: 90%;
+    max-height: 90%;
+    top: calc(50% + 50px);
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .gjennomsiktig {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 500px) {
+  .overlay {
+    max-width: 90%;
+    max-height: 90%;
+    top: calc(50% + 50px);
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .gjennomsiktig {
+    font-size: 20px;
+  }
 }
