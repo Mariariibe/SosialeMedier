@@ -382,13 +382,6 @@ section {
   --gronnknapphover: rgb(88, 147, 90);
 }
 
-header {
-  background-color: lightblue;
-  padding: 10px;
-  color: white;
-  text-align: center;
-}
-
 .main {
   max-width: 800px;
   margin: 20px auto;
