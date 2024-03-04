@@ -1,7 +1,7 @@
 /* Fonter: Cute Font (logo), Josefin Sans (brødtekst), Kanit (overskrifter) */
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{ 
+body {
   margin: 0px;
   font-family: 'Josefin Sans';
   font-size: 30px;
@@ -9,81 +9,81 @@ body{
 
 /* Container for all sections */
 .container {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
 .container p {
-    max-width: 400px;
-    margin: 0 auto;
+  max-width: 400px;
+  margin: 0 auto;
 }
-  
+
 /* First section with text to the left and image to the right */
 .section1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    background-color: var(--color5);
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: var(--color5);
+}
+
 /* Second section with text to the right and image to the left */
 .section2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    background-color: var(--color6);
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: var(--color6);
+}
+
 /* Third section with text to the left and right, and image in the center */
 .section3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--color5);
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color5);
+}
+
 /* Style for the images */
 img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px;
-  }
-  
+  max-width: 100%;
+  height: auto;
+  margin: 20px;
+}
+
 /* Style for the "read more" link */
 .read-more {
-    margin-top: 10px;
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    font-size: 15px;
-  }
-  
+  margin-top: 10px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 /* Hover effect for the "read more" link */
 .read-more:hover {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
+}
 
 /* Farger */
 :root {
-    --color1: #0d1b2a;
-    --color2: #1b263b;
-    --color3: #415a77;
-    --color4: #778da9;
-    --color5: #e0e1dd;
-    --color6: #ccdbdc;
-    --bakgrunnsfarge1:rgba(0, 0, 0, 0.505) ;
+  --color1: #0d1b2a;
+  --color2: #1b263b;
+  --color3: #415a77;
+  --color4: #778da9;
+  --color5: #e0e1dd;
+  --color6: #ccdbdc;
+  --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -119,14 +119,14 @@ img {
   margin-left: 5rem;
 }
 
-.nav-link{
+.nav-link {
   font-size: 25px;
   font-weight: 400;
   color: var(--color5);
   text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #482ff7;
 }
 
@@ -139,69 +139,74 @@ img {
 
 @media only screen and (max-width: 970px) {
   .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: #fff;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .nav-menu.active {
-      left: 0;
+    left: 0;
   }
 
   .nav-item {
-      margin: 2.5rem 0;
+    margin: 2.5rem 0;
   }
 
   .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
 
   .hamburger.active .bar:nth-child(1) {
-      -webkit-transform: translateY(8px) rotate(45deg);
-      transform: translateY(8px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(3) {
-      -webkit-transform: translateY(-8px) rotate(-45deg);
-      transform: translateY(-8px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
 p {
-    font-weight: 200;
-    font-size: 25px;
+  font-weight: 200;
+  font-size: 25px;
+  line-height: 1.5;
 }
 
-h1 {
-    font-weight: 400;
+h1, h2 {
+  font-weight: 400;
+  line-height: 1;
+  color: rgb(65, 65, 84);
 }
+
+ 
 
 .variation1 {
-    background-color: var(--color5);
+  background-color: var(--color5);
 }
 
 .variation2 {
-    background-color: var(--color6);
+  background-color: var(--color6);
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 section {
@@ -213,14 +218,14 @@ section {
 
 /* Hero */
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(medier/konsekvens3.jpg);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(medier/konsekvens3.jpg);
 
 }
 
-.herogeninfo{
+.herogeninfo {
   background-image: url(medier/hero1.jpg);
 }
 
@@ -241,44 +246,52 @@ section {
 */
 
 .gjennomsiktig {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    background-color: var(--bakgrunnsfarge1);
-    z-index: 2;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: var(--color5);
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: var(--bakgrunnsfarge1);
+  z-index: 2;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color5);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+  .section1,
+  .section2,
+  .section3 {
+    flex-direction: column;
+    text-align: center;
   }
 
-  @media screen and (max-width: 768px) {
-    .section1, .section2, .section3 {
-        flex-direction: column;
-        text-align: center;
-    }
+  img {
+    margin: 20px 0;
+    /* Adjust margin for smaller screens */
+  }
 
-    img {
-        margin: 20px 0; /* Adjust margin for smaller screens */
-    }
-
-    .container p {
-        max-width: 100%;
-    }
+  .container p {
+    max-width: 100%;
+  }
 }
 
 .overlay {
@@ -306,14 +319,14 @@ section {
 
 @media (max-width: 970px) {
   .overlay {
-    padding: 10px; 
-    max-width: 90%; 
-    max-height: 90%; 
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
     top: calc(50% + 50px);
   }
 
   .overlay p {
-    font-size: 24px; 
+    font-size: 24px;
   }
 
 
@@ -364,7 +377,7 @@ section {
 }
 
 
-:root{
+:root {
   --gronnknapp: rgb(103, 173, 105);
   --gronnknapphover: rgb(88, 147, 90);
 }
@@ -393,15 +406,6 @@ header {
   border-radius: 8px;
 }
 
-h1,
-h2 {
-  color: rgb(65, 65, 84);
-  line-height: 1;
-}
-
-p {
-  line-height: 1.5;
-}
 
 .hidden {
   display: none;
@@ -420,6 +424,7 @@ button:hover {
   background-color: var(--gronnknapphover);
   font-weight: 600;
 }
+
 factor {
   margin-bottom: 20px;
 }
