@@ -180,19 +180,6 @@ img {
   }
 }
 
-p {
-  font-weight: 200;
-  font-size: 25px;
-  line-height: 1.5;
-}
-
-h1, h2 {
-  font-weight: 400;
-  line-height: 1;
-  color: rgb(65, 65, 84);
-}
-
- 
 
 .variation1 {
   background-color: var(--color5);
