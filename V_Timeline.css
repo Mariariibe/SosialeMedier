@@ -66,3 +66,14 @@ h1 {
     line-height: 1.5;
 }
 
+.timeline__component--bg:hover {
+    background: rgb(136, 158, 133);
+    box-shadow: 0 0 10px rgba(12, 12, 12, 0.3);
+    padding: 40px;
+}
+
+.timeline__component--bg:hover h2,
+.timeline__component--bg:hover p {
+    color: black;
+    font-size: 25px;
+}
