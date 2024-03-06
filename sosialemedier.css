@@ -86,6 +86,9 @@ img {
   box-sizing: border-box;
 }
 
+
+/* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -113,6 +116,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
+  list-style: none;
 }
 
 .nav-item {
@@ -179,6 +184,8 @@ img {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+/* NAVBAR SLUTT */
 
 .variation1 {
   background-color: var(--color5);
