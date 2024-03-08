@@ -48,6 +48,10 @@ section {
   grid-template-rows: 70px 1fr;
 }
 
+.struktur1, .struktur2 * {
+  padding: 20px;
+}
+
 .struktur2 {
   width: 80%;
   display: grid;
