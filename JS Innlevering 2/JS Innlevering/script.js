@@ -72,6 +72,9 @@ function guessLetter() {
     }
 }
 
+// Bruk denne hangmanBilde.src = "bilder/hangman-" + forsøk + ".svg";
+
+
 
 // Kall newGame() for å starte det første spillet
 newGame();
