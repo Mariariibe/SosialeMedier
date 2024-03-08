@@ -229,8 +229,9 @@ img {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(medier/konsekvens3.jpg);
-  background-size: cover;
+  background-image: url(medier/soialemedier.png);
+  background-size:cover;
+
 }
 
 .herogeninfo {
@@ -487,4 +488,15 @@ factor {
 .timeline__component--bg:hover p {
   color: black;
   font-size: 25px;
+}
+
+#games img {
+  border-radius: 20%;
+  border-color: #1b263b;
+  border-style: solid;
+}
+
+#games :hover {
+  border-radius: 0%;
+  border-width: 5px;
 }
