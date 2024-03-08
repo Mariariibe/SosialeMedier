@@ -4,22 +4,25 @@
 body {
   margin: 0px;
   font-family: 'Josefin Sans';
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* Container for all sections */
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .container p {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* First section with text to the left and image to the right */
-.section1 {
+.section {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -28,31 +31,42 @@ body {
   background-color: var(--color5);
 }
 
-/* Second section with text to the right and image to the left */
-.section2 {
-  width: 100%;
-  display: flex;
+section {
   justify-content: center;
-  align-items: center;
-  text-align: left;
+  width: 100%;
+  padding: 40px;
+}
+
+.section:nth-child(even) {
   background-color: var(--color6);
 }
 
-/* Third section with text to the left and right, and image in the center */
-.section3 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--color5);
+.struktur1 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+}
+
+.struktur2 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+}
+
+.struktur:nth-child(even) {
+  grid-template-columns: 300px 1fr;
+}
+
+h1 {
+  grid-column: 1 / 3;
 }
 
 /* Style for the images */
 img {
   max-width: 1000px;
-  height: auto;
-  margin: 20px;
+  width: 100%;
 }
 
 /* Style for the "read more" link */
@@ -187,26 +201,7 @@ img {
 
 /* NAVBAR SLUTT */
 
-.variation1 {
-  background-color: var(--color5);
-}
 
-.variation2 {
-  background-color: var(--color6);
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-section {
-  justify-content: center;
-  width: 100%;
-  padding: 40px;
-}
 .istor {
   border: 7px solid var(--color3);
   border-radius: 50%;
@@ -242,10 +237,6 @@ section {
   background-image: url(medier/hero1.jpg);
 }
 
-
-.container img{
-  max-width: 400px;
-}
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
@@ -407,15 +398,6 @@ section {
   border-radius: 15px;
 
 }
-
-.variation1,
-.variation2 {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 8px;
-}
-
 
 .hidden {
   display: none;
