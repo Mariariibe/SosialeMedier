@@ -102,8 +102,6 @@ function update() {
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
             score += 0.5 // fordi det er to piper
-            var pointSound = document.getElementById("point")
-            pointSound.cloneNode().play()
             pipe.passed = true
         }
 
