@@ -215,7 +215,6 @@
         const wordList = [
             { word: "guitar", hint: "A musical instrument with strings." },
             { word: "rainbow", hint: "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light." }
-            // Add more words here...
         ];
 
         const getRandomWord = () => {
@@ -262,7 +261,7 @@
             }
         }
 
-        // Create alphabet buttons
+
         for (let i = 97; i <= 122; i++) {
             const button = document.createElement("button");
             button.textContent = String.fromCharCode(i);
@@ -274,7 +273,7 @@
             keyboardDiv.appendChild(button);
         }
 
-        // Play again button functionality
+
         playAgainButton.addEventListener("click", () => {
             document.querySelector(".game-modal").style.display = "none";
             getRandomWord();
