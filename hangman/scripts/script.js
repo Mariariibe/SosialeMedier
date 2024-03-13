@@ -6,7 +6,7 @@ const getRandomWord = () => {
     const {word, hint} = wordList[Math.floor(Msth.random() * wordList.length)]
     console.log(word)
     document.querySelector(".hint-text b").innerText = hint;
-    wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"></li> ` ).join("");
+    wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"></li>` ).join("");
 }
 
 //Keyboard knapper
