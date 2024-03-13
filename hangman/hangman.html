@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts/word-list.js" defer></script>
-    <script src="scripts/script.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -174,6 +172,7 @@
             }
         }
     </style>
+    </style>
 </head>
 
 <body>
@@ -181,57 +180,108 @@
         <div class="content">
             <img src="bilder/lost.gif" alt="git">
             <h4>Game over!</h4>
-            <p>Det riktige ordet var: <b>rainbow</b></p>
-            <button class="play-again">Spill igjen</button>
+            <p>The correct word was: <b><span class="correct-word"></span></b></p>
+            <button class="play-again">Play Again</button>
         </div>
     </div>
     <div class="container">
         <div class="hangman-box">
-            <img src="bilder/hangman-0.svg" alt="hangman-img">
             <h1>Hangman Game</h1>
+            <img src="bilder/hangman-0.svg" alt="hangman-img">
         </div>
         <div class="game-box">
-            <ul class="word-display"></ul>
             <h4 class="hint-text">
                 Hint:
                 <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nisi tellus, dignissim eu auctor non</b>
             </h4>
+            <ul class="word-display"></ul>
             <h4 class="guesses-text">
-                Feil gjett:
-                <b>0 / 6</b>
+                Wrong Guesses:
+                <b><span class="wrong-guesses">0</span> / 6</b>
             </h4>
-            <div class="keyboard">
-                <button>a</button><button>b</button><button>c</button><button>d</button>
-                <button>e</button><button>f</button><button>g</button><button>h</button>
-                <button>i</button><button>j</button><button>k</button><button>l</button>
-                <button>m</button><button>n</button><button>o</button><button>p</button>
-                <button>q</button><button>r</button><button>s</button><button>t</button>
-                <button>u</button><button>v</button><button>w</button><button>x</button>
-                <button>y</button><button>z</button>
-            </div>
         </div>
     </div>
 
     <script>
         const wordDisplay = document.querySelector(".word-display");
-        const keyboard = document.querySelector(".keyboard");
+        const keyboardDiv = document.querySelector(".keyboard");
+        const hangmanImage = document.querySelector(".hangman-box img");
+        const wrongGuessesSpan = document.querySelector(".wrong-guesses");
+        const correctWordSpan = document.querySelector(".correct-word");
+        const playAgainButton = document.querySelector(".play-again");
+        let selectedWord = "";
+        let wrongGuesses = 0;
 
         const wordList = [
-            {
-                word: "guitar",
-                hint: "A musical instrument with strings."
-            },
+            { word: "guitar", hint: "A musical instrument with strings." },
+            { word: "rainbow", hint: "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light." }
             // Add more words here...
-            {
-                word: "rainbow",
-                hint: "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light."
-            }
         ];
 
         const getRandomWord = () => {
-            //Velger ord
-            const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)]
-            console.log(word)
+            const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
             document.querySelector(".hint-text b").innerText = hint;
-            wordDisplay.innerHTML = word.split("").map(() => `<li class="letter"></li>`).join("");
+            selectedWord = word;
+            wrongGuesses = 0;
+            updateHangmanImage(0);
+            wrongGuessesSpan.textContent = wrongGuesses;
+            wordDisplay.innerHTML = selectedWord.split("").map(() => `<li class="letter"></li>`).join("");
         }
+
+        const updateHangmanImage = (step) => {
+            hangmanImage.src = `bilder/hangman-${step}.svg`;
+        }
+
+        const checkGuess = (letter) => {
+            const letters = selectedWord.split("");
+            let found = false;
+            for (let i = 0; i < letters.length; i++) {
+                if (letters[i] === letter) {
+                    wordDisplay.children[i].textContent = letter;
+                    found = true;
+                }
+            }
+            if (!found) {
+                wrongGuesses++;
+                updateHangmanImage(wrongGuesses);
+                wrongGuessesSpan.textContent = wrongGuesses;
+            }
+            if (wrongGuesses === 6) {
+                endGame();
+            } else if (wordDisplay.textContent === selectedWord) {
+                endGame(true);
+            }
+        }
+
+        const endGame = (win = false) => {
+            if (win) {
+                alert("Congratulations! You guessed the word.");
+            } else {
+                correctWordSpan.textContent = selectedWord;
+                document.querySelector(".game-modal").style.display = "flex";
+            }
+        }
+
+        // Create alphabet buttons
+        for (let i = 97; i <= 122; i++) {
+            const button = document.createElement("button");
+            button.textContent = String.fromCharCode(i);
+            button.addEventListener("click", () => {
+                if (!wordDisplay.textContent.includes(button.textContent)) {
+                    checkGuess(button.textContent);
+                }
+            });
+            keyboardDiv.appendChild(button);
+        }
+
+        // Play again button functionality
+        playAgainButton.addEventListener("click", () => {
+            document.querySelector(".game-modal").style.display = "none";
+            getRandomWord();
+        });
+
+        getRandomWord();
+    </script>
+</body>
+
+</html>
