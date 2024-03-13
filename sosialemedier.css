@@ -29,6 +29,7 @@ body {
   align-items: center;
   text-align: left;
   background-color: var(--color5);
+  flex-direction: column;
 }
 
 section {
@@ -426,10 +427,6 @@ button {
 button:hover {
   background-color: var(--gronnknapphover);
   font-weight: 600;
-}
-
-factor {
-  margin-bottom: 20px;
 }
 
 #games img {
