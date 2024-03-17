@@ -1,0 +1,15 @@
+:root{
+    --graa1: #d7d7d7;
+}
+
+
+.herokons{
+    background-image: url(medier/konsekvens1.jpg);
+    background-size: cover;
+    margin-bottom: 600px;
+}
+
+body{
+    background-color: var(--graa1);
+}
+
