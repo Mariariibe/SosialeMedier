@@ -43,8 +43,8 @@
     }
 
     .word-display .letter {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         font-size: 20px;
         font-weight: 600;
         text-align: center;
@@ -85,7 +85,7 @@
     .keyboard button {
         margin: 5px;
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         text-transform: uppercase;
         background-color: blue;
@@ -138,7 +138,7 @@
 
     .game-modal button {
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         background-color: blue;
         color: white;
