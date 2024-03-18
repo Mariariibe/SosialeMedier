@@ -4,6 +4,7 @@
 
 *{
   font-family: 'Quicksand';
+  margin:0;
 }
 body {
   margin: 0px;
@@ -18,11 +19,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-}
-
-.container p {
-  max-width: 400px;
-  margin: 0;
 }
 
 /* First section with text to the left and image to the right */
@@ -45,16 +41,46 @@ section {
 .section:nth-child(even) {
   background-color: var(--color6);
 }
+.section:nth-child(odd) {
+  background-color: var(--color7);
+}
 
+.struktur1 {
+  width: 80%;
+display: flex;
+flex-direction: column;
+  height: fit-content;
+  align-items:center;
+}
 
-h1 {
-  grid-column: 1 / 3;
+.struktur1 * { 
+  padding: 20px;
+}
+.struktur2 * { 
+  padding: 20px;
+}
+
+.struktur {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+}
+
+.struktur:nth-child(even) {
+  grid-template-columns: 300px 1fr;
+}
+
+.struktur * {
+  padding: 20px;
 }
 
 /* Style for the images */
 img {
   max-width: 1000px;
   width: 100%;
+  object-fit: cover;
+  grid-row: 1 / 3;
 }
 
 /* Style for the "read more" link */
@@ -77,8 +103,9 @@ img {
   --color2: #1b263b;
   --color3: #415a77;
   --color4: #778da9;
-  --color5: #e0e1dd;
-  --color6: #ccdbdc;
+  --color5: #bdc7d3;
+  --color6: #d7d7d7;
+  --color6: #0000000d;
   --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
 }
 
@@ -89,60 +116,6 @@ img {
 }
 
 
-/* NAVBAR */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  background-color: var(--color1);
-  color: var(--color5);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 4;
-}
-
-.hamburger {
-  display: none;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: var(--color5);
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 3;
-  list-style: none;
-}
-
-.nav-item {
-  margin-left: 5rem;
-}
-
-.nav-link {
-  font-size: 25px;
-  font-weight: 400;
-  color: var(--color5);
-  text-decoration: none;
-}
-
-.nav-logo {
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--color5);
-  text-decoration: none;
-}
 
 @media only screen and (max-width: 1075px) {
   .nav-menu {
@@ -227,21 +200,15 @@ img {
 
 /* Hero */
 .hero {
-  position: relative;
-  top: 105px;
+  margin-top: 105px;
   width: 100%;
-  height: 600px;
+  height: 900px;
   background-image: url(medier/soialemedier.png);
   background-size:cover;
-
-
 }
 
-.herogeninfo {
+.geninfo {
   background-image: url(medier/info.jpg);
-  background-size: cover;
-  margin-top: 90px;
-  height: 600px;
 }
 
 /* Ikke i bruk akk nå
@@ -267,6 +234,7 @@ img {
   background-color: var(--bakgrunnsfarge1);
   z-index: 2;
   color: white;
+  font-size: 30px;
 }
 
 .bar1,
@@ -317,11 +285,14 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 60px;
   z-index: 2;
+  border:1px solid black;
+  border-radius:0 50px 0 50px;
+  text-shadow:2px 2px black;
 
   max-width: 1000px;
   max-height: 800px;
@@ -392,8 +363,8 @@ img {
 
 
 :root {
-  --gronnknapp: rgb(103, 173, 105);
-  --gronnknapphover: rgb(88, 147, 90);
+  --gronnknapp: var(--color3);
+  --gronnknapphover: var(--color2);
 }
 
 .main {
@@ -409,7 +380,7 @@ img {
 }
 
 button {
-  background-color: var(--gronnknapp);
+  background-color: var(--color4);
   color: white;
   border: none;
   padding: 5px 10px;
@@ -418,7 +389,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--gronnknapphover);
+  background-color: var(--color3);
   font-weight: 600;
 }
 
@@ -426,18 +397,15 @@ button:hover {
   border-radius: 20%;
   border-color: #1b263b;
   border-style: solid;
-  max-width: 500px;
+  max-width: 230px;
   margin-top: 50px;
 }
 
-#games :hover {
-  border-radius: 0%;
-  border-width: 5px;
+
+#games{
+  display:flex;
 }
-
-
 .sections {
-  padding: 8% 20%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -446,19 +414,6 @@ button:hover {
 }
 
 .sections section:nth-child(odd){
-  background-color: gray;
-}
-footer {
-  background-color: var(--color2);
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  color: white;
-  width: 100%;
-  box-sizing: border-box;
-
+  background-color: var(--color4);
 }
 
-footer div{
-  margin: 20px;
-}

@@ -1,43 +1,17 @@
-:root{
-    --graa1: #d7d7d7;
-}
 
 
-.herokons{
-    background-image: url(medier/konsekvens1.jpg);
-    background-size: cover;
-    margin-bottom: 600px;
-}
 
 body{
     background-color: var(--graa1);
 }
 
-.struktur1 {
-    width: 80%;
-display: flex;
-flex-direction: column;
-    height: fit-content;
-    align-items:center;
+section div{
+    max-width: 50%;
+    text-align: center;
+}
 
+.herokons {
+    height: 100vh;
+    background-image: url(medier/konsekvens1.jpg);
+    background-size:cover;
   }
-  
-  .struktur1, .struktur2 * {
-    padding: 20px;
-  }
-
-  .struktur1 p{ 
-        margin-top:10px;
-  }
-  
-  .struktur2 {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 1fr;
-  }
-  
-  .struktur:nth-child(even) {
-    grid-template-columns: 300px 1fr;
-  }
-  
