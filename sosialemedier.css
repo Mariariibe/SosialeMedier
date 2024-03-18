@@ -298,9 +298,7 @@ img {
 
 @media screen and (max-width: 768px) {
 
-  .section1,
-  .section2,
-  .section3 {
+  .section{
     flex-direction: column;
     text-align: center;
   }
@@ -439,6 +437,7 @@ button:hover {
 #games :hover {
   border-radius: 0%;
   border-width: 5px;
+}
 .timeline {
   margin: 0 auto;
   max-width: 750px;
