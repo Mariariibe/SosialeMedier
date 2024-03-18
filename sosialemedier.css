@@ -20,11 +20,6 @@ body {
   position: relative;
 }
 
-.container p {
-  max-width: 400px;
-  margin: 0;
-}
-
 /* First section with text to the left and image to the right */
 .section {
   width: 100%;
@@ -45,6 +40,33 @@ section {
 .section:nth-child(even) {
   background-color: var(--color6);
 }
+
+.struktur1 {
+  width: 80%;
+display: flex;
+flex-direction: column;
+  height: fit-content;
+  align-items:center;
+}
+
+.struktur1 * { 
+  padding: 20px;
+}
+.struktur2 * { 
+  padding: 20px;
+}
+
+.struktur2 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px 1fr;
+}
+
+.struktur:nth-child(even) {
+  grid-template-columns: 300px 1fr;
+}
+
 
 
 h1 {
@@ -227,8 +249,7 @@ img {
 
 /* Hero */
 .hero {
-  position: relative;
-  top: 105px;
+  margin-top: 105px;
   width: 100%;
   height: 600px;
   background-image: url(medier/soialemedier.png);
