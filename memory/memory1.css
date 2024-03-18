@@ -14,12 +14,16 @@
     font-family:'Nunito'
 }
 
-body{
+header{
+    margin-top:105px;
+}
+
+main{
     display: flex;
     align-items:center;
     justify-content: center;
     min-height:100vh;
-    background: skyblue;
+    background: var(--color4);
     flex-direction: column;
     gap: 20px;
     
