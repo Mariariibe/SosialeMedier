@@ -246,7 +246,10 @@ img {
 }
 
 .herogeninfo {
-  background-image: url(medier/hero1.jpg);
+  background-image: url(medier/info.jpg);
+  background-size: cover;
+  margin-top: 90px;
+  height: 600px;
 }
 
 /* Ikke i bruk akk nå
@@ -298,9 +301,7 @@ img {
 
 @media screen and (max-width: 768px) {
 
-  .section1,
-  .section2,
-  .section3 {
+  .section{
     flex-direction: column;
     text-align: center;
   }
@@ -437,6 +438,10 @@ button:hover {
   margin-top: 50px;
 }
 
+#games :hover {
+  border-radius: 0%;
+  border-width: 5px;
+}
 .timeline {
   margin: 0 auto;
   max-width: 750px;
@@ -516,4 +521,13 @@ button:hover {
 
 .sections section:nth-child(odd){
   background-color: gray;
+}
+footer {
+  background-color: var(--color2);
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
