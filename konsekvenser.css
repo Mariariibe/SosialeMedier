@@ -1,6 +1,4 @@
-:root{
-    --graa1: #d7d7d7;
-}
+
 
 
 .herokons{
@@ -13,3 +11,13 @@ body{
     background-color: var(--graa1);
 }
 
+section div{
+    max-width: 50%;
+    text-align: center;
+}
+
+.herokons {
+    height: 900px;
+    background-image: url(medier/konsekvens.jpg);
+    background-size:cover;
+  }
