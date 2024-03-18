@@ -29,3 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+timelineComponents.addEventListener("onclick", function(){
+    i
+})
+}
+

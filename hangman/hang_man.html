@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="h_style.css">
+
+</head>
+
+
+<div class="game-modal">
+    <div class="content">
+        <h4>Game over!</h4>
+        <p>Det riktige ordet var: <b><span class="correct-word"></span></b></p>
+        <button class="play-again">Spill igjen</button>
+    </div>
+</div>
+<div class="container">
+    <div class="hangman-box">
+        <h1>Hangman Spill</h1>
+        <img src="hangman-0.svg" alt="hangman-img">
+    </div>
+    <div class="game-box">
+        <h4 class="hint-text">
+            Hint:
+            <b></b>
+        </h4>
+        <ul class="word-display"></ul>
+        <h4 class="guesses-text">
+            Forsøk:
+            <b><span class="wrong-guesses">0</span> / 6</b>
+        </h4>
+        <div class="keyboard">
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
