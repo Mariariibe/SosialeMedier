@@ -520,7 +520,7 @@ button:hover {
   background-color: gray;
 }
 footer {
-  background-color: var(--bakgrunnsfarge2);
+  background-color: var(--color2);
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
