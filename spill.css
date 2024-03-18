@@ -1,0 +1,52 @@
+:root {
+    --color1: #0d1b2a;
+    --color2: #1b263b;
+    --color3: #415a77;
+    --color4: #778da9;
+    --color5: #bdc7d3;
+    --color6: #d7d7d7;
+    --color7: #0000000d;
+    --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
+  }
+  
+main{
+    margin-top: 150px;
+
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    max-width: 500px;
+}
+
+.ulikespill{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ulikespill section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: var(--color7);
+    flex-direction: column;
+    
+}
+
+  section {
+    justify-content: center;
+    width: 100%;
+  }
+
+.ulikespill >:nth-child(odd){
+    background-color: var(--color6);
+
+}
+

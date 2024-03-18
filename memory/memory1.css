@@ -55,12 +55,14 @@ button {
     border-radius: 5%;
 }
 .brett{
-    height:400px;
-    width:400px;
+    height:700px;
+    width:700px;
     background: white;
     border-radius: 5%;
     padding: 25px;
+    margin:40px;
 }
+
 
 .brikker .kort{
     height: calc(100% / 4 - 10px);

@@ -10,7 +10,7 @@ body {
   margin: 0px;
   font-family: 'Josefin Sans';
   font-size: 20px;
-  
+
 }
 
 /* Container for alle sections */
@@ -106,7 +106,7 @@ img {
   --color4: #778da9;
   --color5: #bdc7d3;
   --color6: #d7d7d7;
-  --color6: #0000000d;
+  --color7: #00000017;
   --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
 }
 
@@ -181,15 +181,16 @@ img {
   border: 7px solid var(--color3);
   border-radius: 50%;
   aspect-ratio: 1/1;
-  width: 120px;
+  width: 200px;
   margin-left: 5%;
   color: var(--color3);
+  text-align: center;
 }
 .hjelpsection div{
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  padding: 0 20%;
 
 }
 
@@ -368,6 +369,10 @@ img {
   --gronnknapphover: var(--color2);
 }
 
+main{
+  min-height: 80vh;
+}
+
 .main {
   max-width: 800px;
   margin: 20px auto;
@@ -394,18 +399,6 @@ button:hover {
   font-weight: 600;
 }
 
-#games img {
-  border-radius: 20%;
-  border-color: #1b263b;
-  border-style: solid;
-  max-width: 230px;
-  margin-top: 50px;
-}
-
-
-#games{
-  display:flex;
-}
 .sections {
   display: flex;
   justify-content: center;
