@@ -6,38 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="h_style.css">
+    <link rel="stylesheet" href="/footerognav.css">
 
 </head>
 
+<body>
 
-<div class="game-modal">
-    <div class="content">
-        <h4>Game over!</h4>
-        <p>Det riktige ordet var: <b><span class="correct-word"></span></b></p>
-        <button class="play-again">Spill igjen</button>
-    </div>
-</div>
-<div class="container">
-    <div class="hangman-box">
-        <h1>Hangman Spill</h1>
-        <img src="hangman-0.svg" alt="hangman-img">
-    </div>
-    <div class="game-box">
-        <h4 class="hint-text">
-            Hint:
-            <b></b>
-        </h4>
-        <ul class="word-display"></ul>
-        <h4 class="guesses-text">
-            Forsøk:
-            <b><span class="wrong-guesses">0</span> / 6</b>
-        </h4>
-        <div class="keyboard">
+    <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo">Sosiale Medier</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/generell_info.html" class="nav-link">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/eksempler_konspirasjonsteorier.html" class="nav-link">Konspirasjonsteorier</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/konsekvenser.html" class="nav-link">Konsekvenser</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/gamemenu.html" class="nav-link">Spill</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
+
+    <div class="game-modal">
+        <div class="content">
+            <h4>Game over!</h4>
+            <p>Det riktige ordet var: <b><span class="correct-word"></span></b></p>
+            <button class="play-again">Spill igjen</button>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <div class="hangman-box">
+            <h1>Hangman Spill</h1>
+            <img src="hangman-0.svg" alt="hangman-img">
+        </div>
+        <div class="game-box">
+            <h4 class="hint-text">
+                Hint:
+                <b></b>
+            </h4>
+            <ul class="word-display"></ul>
+            <h4 class="guesses-text">
+                Forsøk:
+                <b><span class="wrong-guesses">0</span> / 6</b>
+            </h4>
+            <div class="keyboard">
+
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>
+            <h3>Om oss:</h3>
+            <p>Vårt mål er informere samfunnet om konspirasjonsteorier for å forebygge spredningen.</p>
+        </div>
+        <div>
+            <h3>Kontakt oss</h3>
+            <ul>
+                <li> mail: sosialemedier@gmail.com</li>
+                <li> tlf: +47 480 41 708 </li>
+                <li> Adresse: Prinsensgate 78, 0152 Oslo</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Følg oss</h3>
+            <ul>
+                <li>Instagram: @konspirasjoner</li>
+                <li>Facebook: @konspirasjoner</li>
+                <li>Snapchat: @konspirasjoner</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

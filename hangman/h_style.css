@@ -5,12 +5,10 @@
     }
 
     body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: blue;
+        justify-content: normal;
         font-family: Arial, sans-serif;
+        margin-top: 200px;
+        background: var(--color4);
     }
 
     .container {
@@ -21,6 +19,7 @@
         align-items: flex-end;
         padding: 60px 40px;
         border-radius: 10px;
+        margin: 100px;
     }
 
     .hangman-box img {

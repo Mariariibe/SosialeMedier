@@ -213,6 +213,11 @@ img {
   background-image: url(medier/info.jpg);
 }
 
+.GDPR {
+  background-image: url(medier/GDPR.jpg);
+  height: 400px;
+}
+
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
