@@ -8,11 +8,13 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+    console.log("Hei")
 }
 
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    console.log("hallo")
 }
 
 
