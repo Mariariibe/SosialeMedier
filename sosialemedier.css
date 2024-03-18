@@ -247,6 +247,8 @@ img {
 
 .herogeninfo {
   background-image: url(medier/hero1.jpg);
+  background-size: cover;
+  margin-top: 105px;
 }
 
 /* Ikke i bruk akk nå
