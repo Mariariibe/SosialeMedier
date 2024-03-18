@@ -258,11 +258,8 @@ img {
 
 }
 
-.herogeninfo {
+.geninfo {
   background-image: url(medier/info.jpg);
-  background-size: cover;
-  margin-top: 90px;
-  height: 600px;
 }
 
 /* Ikke i bruk akk nå
@@ -288,6 +285,7 @@ img {
   background-color: var(--bakgrunnsfarge1);
   z-index: 2;
   color: white;
+  font-size: 30px;
 }
 
 .bar1,
