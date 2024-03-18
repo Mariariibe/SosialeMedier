@@ -1,90 +1,87 @@
 :root {
-    --color1: #0d1b2a;
-    --color2: #1b263b;
-    --color3: #415a77;
-    --color4: #778da9;
-    --color5: #e0e1dd;
-    --color6: #ccdbdc;
-    --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
-  }
+  --color1: #0d1b2a;
+  --color2: #1b263b;
+  --color3: #415a77;
+  --color4: #778da9;
+  --color5: #e0e1dd;
+  --color6: #ccdbdc;
+  --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
+}
 
+
+h1{
+  text-align: center;
+}
 body {
-    background-color: var(--color2);
-    padding-top: 150px;
-    font-family: "Fira Sans", sans-serif;
-    color: var(--color5);
-  }
-  
-h1 {
-    text-align: center;
-    padding: 30px;
-  }
-  
-  .timeline {
-    margin: 0 auto;
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: 1fr 3px 1fr;
-    padding: 50px;
-  }
-  
-  .timeline__component {
-    margin: 0 20px 20px 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 2s ease, transform 2s ease;
-  }
-  
-  .timeline__component--bg {
-    padding: 1.5em;
-    background-color: var(--color3);
-    box-shadow: 0 0 5px rgba(12, 12, 12, 0.2);
-    border-radius: 10px;
-  }
-  
-  .timeline__middle {
-    position: relative;
-    background: #ffffff;
-  }
-  
-  .timeline__point {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    border-radius: 50%;
-  }
-  
-  .timeline__point--bottom {
-    top: initial;
-    bottom: 0;
-  }
-  
-  .timeline__date--right {
-    text-align: right;
-  }
-  
-  .timeline__title {
-    margin: 0;
-    font-size: 1.15em;
-    font-weight: bold;
-  }
-  
-  .timeline__paragraph {
-    line-height: 1.5;
-  }
-  
-  .timeline__component--bg:hover {
-    background: var(--color5);
-    box-shadow: 0 0 10px rgba(12, 12, 12, 0.3);
-    padding: 40px;
-  }
-  
-  .timeline__component--bg:hover h2,
-  .timeline__component--bg:hover p {
-    color: black;
-    font-size: 25px;
-  }
+  background-color: var(--color2);
+  padding-top: 150px;
+  font-family: "Fira Sans", sans-serif;
+  color: var(--color5);
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  padding: 50px;
+}
+
+.timeline__component {
+  margin: 0 20px 20px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.timeline__component--bg {
+  padding: 1.5em;
+  background-color: var(--color3);
+  box-shadow: 0 0 5px rgba(12, 12, 12, 0.2);
+  border-radius: 10px;
+}
+
+.timeline__middle {
+  position: relative;
+  background: white;
+}
+
+.timeline__point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.timeline__point--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline__date--right {
+  text-align: right;
+}
+
+.timeline__title {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.timeline__paragraph {
+  line-height: 1.5;
+}
+
+.timeline__component--bg:hover {
+  background: var(--color5);
+  box-shadow: 0 0 10px rgba(12, 12, 12, 0.3);
+}
+
+.timeline__component--bg:hover h2,
+.timeline__component--bg:hover p {
+  color: black;
+}

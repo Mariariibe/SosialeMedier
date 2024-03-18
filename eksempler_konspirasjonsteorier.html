@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <title>Eksempler på konspirasjonsteorier</title>
     <link rel="stylesheet" href="V_Timeline.css">
     <link rel="stylesheet" href="sosialemedier.css">
@@ -37,7 +39,7 @@
         </nav>
     </header>
     <h1>
-        Eksempler på konspirasjonsteorier
+       --- Eksempler på konspirasjonsteorier ---
     </h1>
 
     <div class="timeline">
@@ -102,39 +104,30 @@
         </div>
     </div>
 
-    <script>
-        // Følgende Javascript kode hører til siden eksempler_konspirasjonsteorier
-
-        document.addEventListener("DOMContentLoaded", function () {
-            var timelineComponents = document.querySelectorAll('.timeline__component');
-
-            function isInViewport(element) {
-                var rect = element.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function animateTimelineComponents() {
-                timelineComponents.forEach(function (component) {
-                    if (isInViewport(component)) {
-                        component.style.opacity = 1;
-                        component.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-
-            animateTimelineComponents();
-
-            window.addEventListener('scroll', function () {
-                animateTimelineComponents();
-            });
-        });
-    </script>
-
+ 
+<footer>
+    <div>
+        <h3>Om oss:</h3>
+        <p>Vårt mål er informere samfunnet om konspirasjonsteorier for å forebygge spredningen.</p>
+    </div>
+    <div>
+        <h3>Kontakt oss</h3>
+        <ul>
+            <li> mail: sosialemedier@gmail.com</li>
+            <li> tlf: +47 480 41 708 </li>
+            <li> Adresse: Prinsensgate 78, 0152 Oslo</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Følg oss</h3>
+        <ul>
+            <li>Instagram: @konspirasjoner</li>
+            <li>Facebook: @konspirasjoner</li>
+            <li>Snapchat: @konspirasjoner</li>
+        </ul>
+    </div>
+</footer>
+<script src="eksemplerkons.js"></script>
 </body>
 
 </html>
