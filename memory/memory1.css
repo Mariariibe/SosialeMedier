@@ -55,15 +55,20 @@ button {
     border-radius: 5%;
 }
 .brett{
-    height:700px;
-    width:700px;
+    height:600px;
+    width:600px;
     background: white;
     border-radius: 5%;
     padding: 25px;
     margin:40px;
 }
 
-
+.bakside{
+    font-size: 0.9vw;
+    display: flex;
+    align-items: center;
+    padding:5px;
+}
 .brikker .kort{
     height: calc(100% / 4 - 10px);
     width: calc(100% / 4 - 10px);
@@ -93,7 +98,7 @@ button {
 }
 
 .kort .forside span{
-    font-size: 40px;
+    font-size: 70px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -109,6 +114,7 @@ button {
 }
 .kort .bakside img{
     max-width: 70px;
+
 }
 
 .valgt{
