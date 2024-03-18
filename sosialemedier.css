@@ -28,7 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: left;
-  background-color: var(--color5);
+  background-color: (--color5);
   flex-direction: column;
 }
 
@@ -409,7 +409,6 @@ img {
   background-color: white;
   padding: 20px;
   border-radius: 15px;
-
 }
 
 .hidden {
@@ -434,13 +433,10 @@ button:hover {
   border-radius: 20%;
   border-color: #1b263b;
   border-style: solid;
+  max-width: 500px;
+  margin-top: 50px;
 }
 
-<<<<<<< Updated upstream
-#games :hover {
-  border-radius: 0%;
-  border-width: 5px;
-=======
 .timeline {
   margin: 0 auto;
   max-width: 750px;
@@ -520,5 +516,4 @@ button:hover {
 
 .sections section:nth-child(odd){
   background-color: gray;
->>>>>>> Stashed changes
 }
