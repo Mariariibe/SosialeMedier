@@ -19,41 +19,34 @@ h1{
 }
 
 img{
-    max-width: 500px;
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
 }
 
-.ulikespill{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ulikespill section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--color7);
+}
+
+section div {
+    padding: 20px;
+    display: flex;
     flex-direction: column;
-    
+    align-items: center;
 }
 
-  section {
-    justify-content: center;
-    width: 100%;
+@media screen and (max-width: 900px) {
+    section {
+        grid-template-columns: 1fr;
+    }
   }
-
-.ulikespill >:nth-child(odd){
-    background-color: var(--color6);
-
-}
-
 .spillhero{
     background-image: url(medier/spillbilde.jpg);
     height: 600px;
 }
 
-section div{
-    max-width: 40%;
+p {
+    width: 30vh;
 }

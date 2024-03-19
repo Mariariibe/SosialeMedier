@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Månelandingen</title>
+    <link rel="stylesheet" href="spill.css">
+    <link rel="stylesheet" href="../footerognav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-logo">Sosiale Medier</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../generell_info.html" class="nav-link">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../eksempler_konspirasjonsteorier.html" class="nav-link">Konspirasjonsteorier</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../konsekvenser.html" class="nav-link">Konsekvenser</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../gamemenu.html" class="nav-link">Spill</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <p>hei</p>
+        <canvas id="board"></canvas>
+        <div id="slider">
+            <input type="range" min="2" max="6" id="speed">
+        </div>
+    </main>
+
+    <audio src="media/jump.mp3" id="jump"></audio>
+    <audio src="media/gameover.mp3" id="gameover"></audio>
+
+    <script src="spill.js"></script>
+</body>
+
+</html>
