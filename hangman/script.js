@@ -14,6 +14,7 @@
             { word: "tillit", hint: "Noe myndighetene kan miste, når konspirasjonsteorier sprer seg."},
             { word: "spekulering", hint: "Konspirasjonsteorier er ofte basert på" },
             { word: "splittelse", hint: "Spredning av konspirasjonsteorier kan føre til ... i samfunnet." },
+            { word: "gdpr", hint: "Passer på personvernet ditt på nett"}
         ];
 
         const getRandomWord = () => {
