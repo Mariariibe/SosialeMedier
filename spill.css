@@ -8,11 +8,6 @@
     --color7: #0000000d;
     --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
   }
-  
-main{
-    margin-top: 150px;
-
-}
 
 h1{
     text-align: center;
@@ -44,7 +39,7 @@ section div {
   }
 .spillhero{
     background-image: url(medier/spillbilde.jpg);
-    height: 600px;
+    height: 100vh;
 }
 
 p {

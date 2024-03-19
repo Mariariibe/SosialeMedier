@@ -14,8 +14,8 @@ body {
     background-size: cover;
     border: 3px solid black;
 }
+
 input {
-    width: 300px;
     transform: rotate(270deg);
 }
 
@@ -31,5 +31,20 @@ h1 {
 main {
     margin-top: 150px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 366px 1fr;
+}
+
+canvas {
+    width: 366px;
+}
+
+@media screen and (max-width: 630px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #slider {
+        transform: rotate(90deg);
+    }
 }
