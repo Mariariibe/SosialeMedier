@@ -214,8 +214,10 @@ img {
 }
 
 .GDPR {
-  background-image: url(medier/GDPR.jpg);
-  height: 400px;
+  background-image: url(medier/personvern1.jpg);
+  height: 100vh;
+
+  margin-top: 100px;
 }
 
 /* Ikke i bruk akk nå
