@@ -225,6 +225,14 @@ img {
   margin-top: 100px;
 }
 
+.uu {
+  background-image: url(medier/uu.jpg);
+  background-size: cover;
+  margin-top: 105px;
+  width: 100%;
+  height: 900px;
+}
+
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
