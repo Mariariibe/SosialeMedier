@@ -139,17 +139,19 @@ img {
   height: 900px;
   background-image: url(medier/soialemedier.png);
   background-size: cover;
+  background-position: center;
 }
 
 .geninfo {
   background-image: url(medier/info.jpg);
+  background-position: center;
 }
 
 .GDPR {
   background-image: url(medier/personvern1.jpg);
   height: 100vh;
-
   margin-top: 100px;
+  background-position: center;
 }
 
 .uu {
