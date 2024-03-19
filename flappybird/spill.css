@@ -1,8 +1,11 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+* {
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: 'Quicksand';
+    text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./media/body_bakgrunn.png);
     background-size: cover;
 }
@@ -11,14 +14,22 @@ body {
     background-size: cover;
     border: 3px solid black;
 }
-#funksjonalitet {
-    display: grid;
-    justify-items: center;
-    flex-wrap: wrap;
+input {
+    width: 300px;
+    transform: rotate(270deg);
 }
-#speed {
-    width: 360px; 
+
+#slider {
+    display: flex;
+    align-items: center;
 }
+
 h1 {
     color: white;
+}
+
+main {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
