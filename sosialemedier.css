@@ -34,6 +34,10 @@ body {
   flex-direction: column;
 }
 
+li {
+  padding: 10px;
+}
+
 section {
   justify-content: center;
   width: 100%;
