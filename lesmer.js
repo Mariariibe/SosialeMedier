@@ -3,8 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var variationSections = document.querySelectorAll('.variation2');
-    var variationSections = document.querySelectorAll('.variation2');
-
+//forEach = Callback function
     variationSections.forEach(function (section) {
         var paragraphs = section.querySelectorAll('p.hidden');
 
