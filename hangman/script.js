@@ -10,7 +10,7 @@
 
         const wordList = [
             { word: "fakenews", hint: "Nyheter som ikke stemmer." },
-            { word: "covid", hint: "En epidemi som brøyt ut i 2020 som det har oppstått mange konspirasjonsteorier." },
+            { word: "covid", hint: "En epidemi som brøyt ut i 2020 som det har oppstått mange konspirasjonsteorier rundt." },
             { word: "tillit", hint: "Noe myndighetene kan miste, når konspirasjonsteorier sprer seg."},
             { word: "spekulering", hint: "Konspirasjonsteorier er ofte basert på" },
             { word: "splittelse", hint: "Spredning av konspirasjonsteorier kan føre til ... i samfunnet." },
