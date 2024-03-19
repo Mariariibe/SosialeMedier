@@ -50,3 +50,7 @@ img{
 
 }
 
+.spillhero{
+    background-image: url(medier/spillbakgrunn.jpg);
+    height: 600px;
+}
