@@ -24,23 +24,17 @@ img{
     object-fit: cover;
 }
 
-.ulikespill{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ulikespill section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--color7);
 }
 
-div {
+section div {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -53,6 +47,6 @@ div {
     height: 600px;
 }
 
-section div{
-    max-width: 40%;
+p {
+    width: 30vh;
 }
