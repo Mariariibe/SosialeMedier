@@ -27,7 +27,6 @@ img{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
 .ulikespill section{
@@ -53,4 +52,8 @@ img{
 .spillhero{
     background-image: url(medier/spillbakgrunn.jpg);
     height: 600px;
+}
+
+section div{
+    max-width: 40%;
 }
