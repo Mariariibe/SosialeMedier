@@ -26,6 +26,8 @@ main{
     background: var(--color4);
     flex-direction: column;
     gap: 20px;
+    padding-top: 100px;
+    
 }
 
 .overskrift{

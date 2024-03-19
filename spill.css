@@ -24,10 +24,18 @@ img{
     object-fit: cover;
 }
 
- section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+.ulikespill{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ulikespill section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
     background-color: var(--color7);
 }
 
@@ -40,3 +48,11 @@ div {
         grid-template-columns: 1fr;
     }
   }
+.spillhero{
+    background-image: url(medier/spillbilde.jpg);
+    height: 600px;
+}
+
+section div{
+    max-width: 40%;
+}
