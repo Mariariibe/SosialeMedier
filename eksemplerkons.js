@@ -29,7 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+// Ikke i bruk, ta i bruk hvis vi skal lage sånn at det popper opp et bildet 
+/*
 timelineComponents.addEventListener("onclick", function(){
     
 })
+*/
 

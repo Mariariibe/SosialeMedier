@@ -31,7 +31,7 @@ body {
   margin: 0 20px 20px 20px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .timeline__component--bg {
@@ -84,4 +84,15 @@ body {
 .timeline__component--bg:hover h2,
 .timeline__component--bg:hover p {
   color: black;
+}
+
+@media screen and (max-width: 650px) {
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline__middle {
+    display: none;
+  }
 }
