@@ -1,7 +1,8 @@
-// Følgende Javascript kode hører til siden eksempler_konspirasjonsteorier
-
 document.addEventListener("DOMContentLoaded", function () {
     var timelineComponents = document.querySelectorAll('.timeline__component');
+
+// Sjekker om elementene er synlig hos brukeren
+// getBoundingClient tar tak i rektangelene rundt elementet
 
     function isInViewport(element) {
         var rect = element.getBoundingClientRect();
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
-
+// Gjør elementet synlig hvis isInViewport er true
     function animateTimelineComponents() {
         timelineComponents.forEach(function (component) {
             if (isInViewport(component)) {
