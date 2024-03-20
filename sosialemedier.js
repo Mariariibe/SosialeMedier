@@ -14,7 +14,3 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
-
-const dropdown1 = document.getElementById("dropdown1")
-const dropdown2 = document.getElementById("dropdown2")
-
