@@ -93,7 +93,10 @@
 
 .nav-item:hover .dropdown-content {display: block;}
 
-.nav-item:hover .dropbtn {background-color: var(--color3);}
+.nav-item:hover .dropbtn {
+  background-color: var(--color3); 
+  font-weight: 100;
+}
 
 
 footer {
