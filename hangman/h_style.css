@@ -148,3 +148,7 @@
     .game-modal button:hover {
         background-color: navy;
     }
+
+    button {
+        color: white;
+    }
