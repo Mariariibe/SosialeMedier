@@ -2,9 +2,9 @@
 // JavaScript for "Les mer"
 document.addEventListener("DOMContentLoaded", function () {
 
-    var variationSections = document.querySelectorAll('.variation2');
+    var lesmer = document.querySelectorAll('.lesmer');
 //forEach = Callback function
-    variationSections.forEach(function (section) {
+    lesmer.forEach(function (section) {
         var paragraphs = section.querySelectorAll('p.hidden');
 
         paragraphs.forEach(function (paragraph) {
