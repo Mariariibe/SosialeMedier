@@ -18,7 +18,6 @@ function closeMenu() {
 }
 
 let windowWidth = window.innerWidth
-console.log(windowWidth)
 function updateWW() {
     windowWidth = window.innerWidth
 }
@@ -37,16 +36,15 @@ const dropbtn2 = document.querySelectorAll(".dropbtn")[1]
 
 navItem1.addEventListener("click", function () {
     if (windowWidth < 1075) {
-        console.log(clickCounter1)
-        console.log(windowWidth)
         if (clickCounter1 % 2 === 0) {
-            navItem1.style.marginBottom = "150px"
-            
+            navItem1.style.marginBottom = "130px"
             ddCont1.style.display = "block"
+            dropbtn1.style.fontWeight = "500"
         }
         else {
-            navItem1.style.marginBottom = "0px"
+            navItem1.style.marginBottom = "30px"
             ddCont1.style.display = "none"
+            dropbtn1.style.fontWeight = "100"
         }
         clickCounter1++
     }
@@ -57,10 +55,12 @@ navItem2.addEventListener("click", function () {
         if (clickCounter2 % 2 === 0) {
             navItem2.style.marginBottom = "150px"
             ddCont2.style.display = "block"
+            dropbtn2.style.fontWeight = "500"
         }
         else {
-            navItem2.style.marginBottom = "0px"
+            navItem2.style.marginBottom = "30px"
             ddCont2.style.display = "none"
+            dropbtn2.style.fontWeight = "100"
         }
         clickCounter2++
     }
