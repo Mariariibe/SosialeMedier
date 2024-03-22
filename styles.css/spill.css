@@ -43,7 +43,7 @@ section div {
     }
   }
 .spillhero{
-    background-image: url(medier/spillbilde.jpg);
+    background-image: url(/medier/spillbilde.jpg);
     height: 100vh;
 }
 
