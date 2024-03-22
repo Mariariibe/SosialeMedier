@@ -75,7 +75,7 @@
   display: none;
   position: absolute;
   background-color: var(--color5);
-  min-width: 160px;
+  width: 92%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 10px;
@@ -87,15 +87,6 @@
   text-decoration: none;
   display: block;
   border-radius: 10px;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.nav-item:hover .dropdown-content {display: block;}
-
-.nav-item:hover .dropbtn {
-  background-color: var(--color3); 
-  font-weight: 100;
 }
 
 
@@ -112,6 +103,17 @@ footer {
 
 footer div {
   margin: 20px;
+}
+
+@media only screen and (min-width: 1075px) {
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .nav-item:hover .dropdown-content {display: block;}
+
+  .nav-item:hover .dropbtn {
+    background-color: var(--color3); 
+    font-weight: 100;
+  }
 }
 
 @media only screen and (max-width: 1075px) {

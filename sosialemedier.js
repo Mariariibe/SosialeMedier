@@ -13,4 +13,21 @@ function mobileMenu() {
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    ddCont1.style.display = "none"
+    ddCont2.style.display = "none"
 }
+
+const navItem1 = document.querySelector(".nav-item")
+const navItem2 = document.querySelectorAll(".nav-item")[1]
+const ddCont1 = document.querySelector(".dropdown-content")
+const ddCont2 = document.querySelectorAll(".dropdown-content")[1]
+
+navItem1.addEventListener("click", function() {
+    navItem1.style.marginBottom = "150px"
+    ddCont1.style.display = "block"
+})
+
+navItem2.addEventListener("click", function() {
+    navItem2.style.marginBottom = "150px"
+    ddCont2.style.display = "block"
+})
