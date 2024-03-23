@@ -20,9 +20,10 @@ function closeMenu() {
 let windowWidth = window.innerWidth
 function updateWW() {
     windowWidth = window.innerWidth
+    
 }
 
-window.setInterval(updateWW, 1000)
+window.setInterval(updateWW, 500)
 
 
 let clickCounter1 = 0
@@ -42,9 +43,9 @@ navItem1.addEventListener("click", function () {
             dropbtn1.style.fontWeight = "500"
         }
         else {
-            navItem1.style.marginBottom = "30px"
+            navItem1.style.marginBottom = null
             ddCont1.style.display = "none"
-            dropbtn1.style.fontWeight = "100"
+            dropbtn1.style.fontWeight = null
         }
         clickCounter1++
     }
@@ -58,9 +59,9 @@ navItem2.addEventListener("click", function () {
             dropbtn2.style.fontWeight = "500"
         }
         else {
-            navItem2.style.marginBottom = "30px"
+            navItem2.style.marginBottom = null
             ddCont2.style.display = "none"
-            dropbtn2.style.fontWeight = "100"
+            dropbtn2.style.fontWeight = null
         }
         clickCounter2++
     }
