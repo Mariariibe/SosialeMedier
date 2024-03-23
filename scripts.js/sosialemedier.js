@@ -44,7 +44,7 @@ navItem1.addEventListener("click", function () {
         }
         else {
             navItem1.style.marginBottom = null
-            ddCont1.style.display = "none"
+            ddCont1.style.display = null
             dropbtn1.style.fontWeight = null
         }
         clickCounter1++
@@ -60,7 +60,7 @@ navItem2.addEventListener("click", function () {
         }
         else {
             navItem2.style.marginBottom = null
-            ddCont2.style.display = "none"
+            ddCont2.style.display = null
             dropbtn2.style.fontWeight = null
         }
         clickCounter2++
