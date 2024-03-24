@@ -148,73 +148,7 @@ img {
 }
 
 
-.istor {
-  border: 7px solid var(--color3);
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  width: 200px;
-  margin-left: 5%;
-  color: var(--color3);
-  text-align: center;
-}
 
-.hjelpsection div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20%;
-
-}
-
-.hjelpsection {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--gjennomsiktig1);
-}
-
-.popupinnhold {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Sentrerer popuppen på skjermen*/
-  background-color: var(--color1);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--color1);
-  font-size: 20px;
-}
-
-.lukkeknapp {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.button2 {
-  border: 2px solid white;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  color: white;
-  width: 25px;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  text-align: center;
-  padding-top: 2px;
-  margin-left: 50%;
-}
 
 /* Hero */
 .hero {

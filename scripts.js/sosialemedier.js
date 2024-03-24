@@ -67,30 +67,4 @@ navItem2.addEventListener("click", function () {
     }
 })
 
-//Infoknapper
-const apnePopupKnapp1 = document.getElementById('apnepop1');
-const popup1 = document.getElementById('popup1');
 
-function apnePopup1() {
-    popup1.style.display = 'block';
-}
-
-function lukkPopup1() {
-    popup1.style.display = 'none';
-}
-
-apnePopupKnapp1.addEventListener('click', apnePopup1);
-
-//Knapp2 (kommentarfelt)
-const apnePopupKnapp2 = document.getElementById('apnepop2');
-const popup2 = document.getElementById('popup2');
-
-function apnePopup2() {
-    popup2.style.display = 'block';
-}
-
-function lukkPopup2() {
-    popup2.style.display = 'none';
-}
-
-apnePopupKnapp2.addEventListener('click', apnePopup2);
