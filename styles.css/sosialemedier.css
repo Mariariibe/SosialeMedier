@@ -216,28 +216,6 @@ img {
   background-image: url(../medier/konsekvens1.jpg);
 }
 
-/*
-.gjennomsiktig1 {
-  padding: 30px;
-  background-image: linear-gradient(to right, var(--gjennomsiktig1), var(--gjennomsiktig2));
-}
-*/
-/* Ikke i bruk akk nå
-.hero > div {
-  position: absolute;
-  left:0;
-  top:0;
-  width: 100%;
-  height: 100%;
-}
-
-.video video {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-}
-*/
-
 .gjennomsiktig {
   display: flex;
   justify-content: center;
