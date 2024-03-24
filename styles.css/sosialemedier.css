@@ -2,24 +2,17 @@
 
 * {
   font-family: 'Quicksand';
-  font-weight: 100;
   margin: 0;
+
 }
 
 body {
   margin: 0px;
   font-size: 20px;
+  background-color: var(--color6);
 }
 
-/* Container for alle sections */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  width: 100vw;
-}
+
 
 /* First section with text to the left and image to the right */
 .section {
@@ -32,23 +25,28 @@ body {
   flex-direction: column;
 }
 
+.konssection {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  flex-direction: column;
+}
+
 li {
   padding: 10px;
 }
 
 section {
   justify-content: center;
-  width: 100%;
-  padding: 40px;
+  max-width: 100%;
+  padding: 40px 0;
 }
 
 .section:nth-child(even) {
   background-color: var(--color6);
 }
 
-.section:nth-child(odd) {
-  background-color: var(--color7);
-}
+
 
 .struktur {
   width: 80%;
@@ -63,6 +61,48 @@ section {
 
 .struktur * {
   padding: 20px;
+}
+
+.ulikespill {
+  background-color: var(--color6);
+}
+
+.ulikespill h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  border-bottom: 5px solid #bdc7d3;
+}
+
+.ulikespill div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.ulikespill img {
+  max-width: 300px;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.ulikespill p {
+  max-width: 300px;
+}
+
+.unisections h2 {
+  text-align: center;
+  border-bottom: 5px solid var(--color4);
+  padding-bottom: 5px;
+}
+
+.unisections div {
+
+  margin: 5% 20%;
+}
+
+.unisections img {
+  max-width: 400px;
 }
 
 /* Style for the images */
@@ -97,6 +137,8 @@ img {
   --color6: #d7d7d7;
   --color7: #00000017;
   --bakgrunnsfarge1: rgba(0, 0, 0, 0.505);
+  --gjennomsiktig1: rgba(0, 0, 0, 0.2);
+  --gjennomsiktig2: rgba(255, 255, 255, 0);
 }
 
 * {
@@ -130,37 +172,122 @@ img {
   flex-direction: column;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gjennomsiktig1);
+}
+
+.popupinnhold {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Sentrerer popuppen på skjermen*/
+  background-color: var(--color1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--color1);
+  font-size: 20px;
+}
+
+.lukkeknapp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button2 {
+  border: 2px solid white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  color: white;
+  width: 25px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 2px;
+  margin-left: 50%;
+}
+
 /* Hero */
 .hero {
   margin-top: 105px;
-  width: 100%;
-  height: 900px;
-  background-image: url(/medier/soialemedier.png);
+  width: 100vw;
+  height: calc(100vh - 105px);
   background-size: cover;
   background-position: center;
+  justify-content: center;
+  display: flex;
+}
+
+.spillhero {
+  background-image: url(/medier/sosialemedier3.jpg);
+}
+
+.hovedside {
+  background-image: url(/medier/sosialemedier1.jpg);
 }
 
 .geninfo {
   background-image: url(/medier/info.jpg);
-  background-position: center;
+
 }
 
 .GDPR {
   background-image: url(/medier/personvern1.jpg);
-  height: 100vh;
-  margin-top: 100px;
-  background-position: center;
 }
 
-.uu {
+.universellutforming {
   background-image: url(/medier/uu.jpg);
-  background-size: cover;
-  margin-top: 105px;
-  width: 100%;
-  height: 900px;
-  background-position: center;
+
 }
 
+.hero::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero div {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0 20%;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 40px;
+  border-bottom: 3px solid var(--color5);
+  margin-bottom: 10px;
+}
+
+.herokons {
+  background-image: url(/medier/konsekvens1.jpg);
+}
+
+/*
+.gjennomsiktig1 {
+  padding: 30px;
+  background-image: linear-gradient(to right, var(--gjennomsiktig1), var(--gjennomsiktig2));
+}
+*/
 /* Ikke i bruk akk nå
 .hero > div {
   position: absolute;
@@ -209,6 +336,34 @@ img {
   transform: translate(0, -11px) rotate(45deg);
 }
 
+.konsbakgrunnen {
+  background-image: url(/medier/boker2.jpg);
+  height: 130px;
+}
+
+
+.konsbakgrunnto {
+  background-image: url(/medier/boker.jpg);
+  height: 130px;
+}
+
+.konsbakgrunntre {
+  background-image: url(/medier/kunnskap1.jpg);
+  height: 130px;
+}
+.konsbakgrunnfire{
+  background-image: url(/medier/kunnskap2.jpg);
+  height: 130px;
+  }
+
+  .konsbakgrunnfem{
+    background-image: url(/medier/sosialemedier6.jpg);
+    height: 130px;
+    }
+    .konsbakgrunnseks{
+      background-image: url(/medier/kontroll2.png);
+      height: 130px;
+      }
 @media screen and (max-width: 768px) {
 
   .section {
@@ -221,9 +376,7 @@ img {
     /* Adjust margin for smaller screens */
   }
 
-  .container p {
-    max-width: 100%;
-  }
+
 }
 
 .overlay {
@@ -357,4 +510,15 @@ button:hover {
 
 .sections section:nth-child(odd) {
   background-color: var(--color4);
+}
+
+.geninfoside {
+  margin: 0 20%;
+
+}
+
+.geninfoside h1 {
+  font-size: 40px;
+  border-bottom: 5px solid var(--color4);
+  margin-bottom: 30px;
 }

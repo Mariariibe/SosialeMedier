@@ -97,7 +97,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
-  width: 100vw;
+  max-width: 100vw;
   box-sizing: border-box;
 
 }

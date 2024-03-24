@@ -13,12 +13,14 @@ h1{
   text-align: center;
 }
 body {
-  background-color: var(--color2);
+
   padding-top: 150px;
   font-family: "Fira Sans", sans-serif;
   color: var(--color5);
 }
-
+#bakgrunn{
+  background-color: var(--color2);
+}
 .timeline {
   margin: 0 auto;
   max-width: 900px;
