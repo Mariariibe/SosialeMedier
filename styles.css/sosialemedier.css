@@ -162,24 +162,24 @@ img {
 }
 
 .spillhero {
-  background-image: url(/medier/sosialemedier3.jpg);
+  background-image: url(../medier/sosialemedier3.jpg);
 }
 
 .hovedside {
-  background-image: url(/medier/sosialemedier1.jpg);
+  background-image: url(../medier/sosialemedier1.jpg);
 }
 
 .geninfo {
-  background-image: url(/medier/info.jpg);
+  background-image: url(../medier/info.jpg);
 
 }
 
 .GDPR {
-  background-image: url(/medier/personvern1.jpg);
+  background-image: url(../medier/personvern1.jpg);
 }
 
 .universellutforming {
-  background-image: url(/medier/uu.jpg);
+  background-image: url(../medier/uu.jpg);
 
 }
 
